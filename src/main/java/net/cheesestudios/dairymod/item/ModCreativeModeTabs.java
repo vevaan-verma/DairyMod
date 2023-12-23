@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.dairy_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        // items
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.ICE_CREAM.get());
                         output.accept(ModItems.NACHOS.get());
@@ -27,8 +28,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MILK_SOLIDS.get());
                         output.accept(ModItems.SALT.get());
 
+                        // advanced items
+                        output.accept(ModItems.CHEESE_DETECTOR.get());
+
+                        // blocks
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
                         output.accept(ModBlocks.SALT_ORE.get());
+
+                        // advanced blocks
+                        output.accept(ModBlocks.SOUND_BLOCK.get());
+
+                        // food
+                        output.accept(ModItems.CHEESE.get());
 
                     })
                     .build());
