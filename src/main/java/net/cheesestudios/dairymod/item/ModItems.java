@@ -19,6 +19,13 @@ public class ModItems {
     public static final RegistryObject<Item> NACHOS = ITEMS.register("nachos",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> CONCENTRATED_CHEESE  = ITEMS.register("concentrated_cheese",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MILK_SOLIDS  = ITEMS.register("milk_solids",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SALT  = ITEMS.register("salt",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
 
         ITEMS.register(eventBus);

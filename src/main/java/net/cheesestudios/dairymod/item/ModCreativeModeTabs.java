@@ -23,6 +23,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.ICE_CREAM.get());
                         output.accept(ModItems.NACHOS.get());
+                        output.accept(ModItems.CONCENTRATED_CHEESE.get());
+                        output.accept(ModItems.MILK_SOLIDS.get());
+                        output.accept(ModItems.SALT.get());
+
 
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
                         

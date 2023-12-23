@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dairymod:milk_solids"
+    },
+    {
+      "item": "dairymod:salt"
+    }
+  ],
+  "result": {
+    "item": "dairymod:cheese",
+    "count": 2
+  }
+}

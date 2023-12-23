@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dairymod:cheese"
+    },
+    {
+      "item": "dairymod:cheese"
+    },
+    {
+      "item": "dairymod:cheese"
+    },
+    {
+      "item": "dairymod:cheese"
+    }
+  ],
+  "result": {
+    "item": "dairymod:cheese_block",
+    "count": 1
+  }
+}

@@ -53,6 +53,9 @@ public class DairyMod {
             event.accept(ModItems.CHEESE);
             event.accept(ModItems.ICE_CREAM);
             event.accept(ModItems.NACHOS);
+            event.accept(ModItems.CONCENTRATED_CHEESE);
+            event.accept(ModItems.MILK_SOLIDS);
+            event.accept(ModItems.SALT);
 
         }
     }
