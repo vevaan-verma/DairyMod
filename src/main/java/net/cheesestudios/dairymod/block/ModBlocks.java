@@ -20,7 +20,7 @@ public class ModBlocks {
 
     // blocks
     public static final RegistryObject<Block> CHEESE_BLOCK = registerBlock("cheese_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.HONEY_BLOCK)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 
