@@ -21,15 +21,15 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
 
                         // items
-                        output.accept(ModItems.CHEESE.get());
-                        output.accept(ModItems.ICE_CREAM.get());
-                        output.accept(ModItems.NACHOS.get());
                         output.accept(ModItems.CONCENTRATED_CHEESE.get());
                         output.accept(ModItems.MILK_SOLIDS.get());
                         output.accept(ModItems.SALT.get());
 
                         // advanced items
                         output.accept(ModItems.CHEESE_DETECTOR.get());
+
+                        // fuel items
+                        output.accept(ModItems.PINECONE.get());
 
                         // blocks
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
@@ -40,6 +40,8 @@ public class ModCreativeModeTabs {
 
                         // food
                         output.accept(ModItems.CHEESE.get());
+                        output.accept(ModItems.ICE_CREAM.get());
+                        output.accept(ModItems.NACHOS.get());
 
                     })
                     .build());

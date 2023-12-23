@@ -2,6 +2,7 @@ package net.cheesestudios.dairymod.item;
 
 import net.cheesestudios.dairymod.DairyMod;
 import net.cheesestudios.dairymod.item.custom.CheeseDetectorItem;
+import net.cheesestudios.dairymod.item.custom.FuelItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,6 +20,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SALT = ITEMS.register("salt",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PINECONE = ITEMS.register("pinecone",
+            () -> new FuelItem(new Item.Properties(), 120));
 
     // advanced items
     public static final RegistryObject<Item> CHEESE_DETECTOR = ITEMS.register("cheese_detector",
