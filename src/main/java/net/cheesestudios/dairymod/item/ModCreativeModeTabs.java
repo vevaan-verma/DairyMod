@@ -27,9 +27,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MILK_SOLIDS.get());
                         output.accept(ModItems.SALT.get());
 
-
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
-                        
+                        output.accept(ModBlocks.SALT_ORE.get());
+
                     })
                     .build());
 
