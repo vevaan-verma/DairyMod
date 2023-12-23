@@ -1,6 +1,10 @@
 package net.cheesestudios.dairymod;
 
 import com.mojang.logging.LogUtils;
+import net.cheesestudios.dairymod.block.ModBlocks;
+import net.cheesestudios.dairymod.item.ModCreativeModeTabs;
+import net.cheesestudios.dairymod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +30,10 @@ public class DairyMod {
 
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus); // register mod items
+        ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus); // register creative mode tabs
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -40,6 +48,13 @@ public class DairyMod {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+
+            event.accept(ModItems.CHEESE);
+            event.accept(ModItems.ICE_CREAM);
+            event.accept(ModItems.NACHOS);
+
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -54,6 +69,7 @@ public class DairyMod {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
 
         }
     }
