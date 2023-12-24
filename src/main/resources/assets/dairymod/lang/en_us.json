@@ -2,19 +2,14 @@
   "item.dairymod.concentrated_cheese": "Concentrated Cheese",
   "item.dairymod.milk_solids": "Milk Solids",
   "item.dairymod.salt": "Salt",
-
   "item.dairymod.cheese_detector": "Cheese Detector",
-
   "item.dairymod.pinecone": "Pinecone",
-
   "block.dairymod.cheese_block": "Block of Cheese",
   "block.dairymod.salt_ore": "Salt Ore",
-
   "block.dairymod.sound_block": "Sound Block",
-
   "item.dairymod.cheese": "Cheese",
   "item.dairymod.ice_cream": "Ice Cream",
   "item.dairymod.nachos": "Nachos",
-
+  "tooltip.dairymod.cheese_detector.tooltip": "Detects cheese under clicked block",
   "creativetab.dairy_tab": "Dairy"
 }
