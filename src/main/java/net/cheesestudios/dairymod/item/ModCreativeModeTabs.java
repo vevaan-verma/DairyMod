@@ -33,10 +33,31 @@ public class ModCreativeModeTabs {
 
                         // blocks
                         output.accept(ModBlocks.CHEESE_BLOCK.get());
+                        output.accept(ModBlocks.SALT_BLOCK.get());
+
+                        // ores
                         output.accept(ModBlocks.SALT_ORE.get());
 
                         // advanced blocks
                         output.accept(ModBlocks.SOUND_BLOCK.get());
+
+                        // SPECIAL BLOCKS
+                        // stairs & slabs
+                        output.accept(ModBlocks.CHEESE_STAIRS.get());
+                        output.accept(ModBlocks.CHEESE_SLAB.get());
+
+                        // buttons & pressure plates
+                        output.accept(ModBlocks.CHEESE_BUTTON.get());
+                        output.accept(ModBlocks.CHEESE_PRESSURE_PLATE.get());
+
+                        // fences & walls
+                        output.accept(ModBlocks.CHEESE_FENCE.get());
+                        output.accept(ModBlocks.CHEESE_FENCE_GATE.get());
+                        output.accept(ModBlocks.CHEESE_WALL.get());
+
+                        // doors
+                        output.accept(ModBlocks.CHEESE_DOOR.get());
+                        output.accept(ModBlocks.CHEESE_TRAPDOOR.get());
 
                         // food
                         output.accept(ModItems.CHEESE.get());
