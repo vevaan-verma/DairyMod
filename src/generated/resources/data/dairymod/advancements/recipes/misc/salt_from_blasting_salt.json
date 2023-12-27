@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_salt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dairymod:salt"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dairymod:salt_from_blasting_salt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_salt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dairymod:salt_from_blasting_salt"
+    ]
+  },
+  "sends_telemetry_event": false
+}

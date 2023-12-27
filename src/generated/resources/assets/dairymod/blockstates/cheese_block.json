@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dairymod:block/cheese_block"
+    }
+  }
+}

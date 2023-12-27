@@ -1,0 +1,14 @@
+{
+  "entries": [
+    "dairymod:snakc_from_enderman",
+    "dairymod:cheese_staff_from_suspicious_sand",
+    "dairymod:snakc_from_creeper",
+    "dairymod:snakc_from_wither_skeleton",
+    "dairymod:snakc_from_piglin",
+    "dairymod:snakc_from_skeleton",
+    "dairymod:pinecone_from_oak_leaf",
+    "dairymod:nachos_from_pillager_outpost_chest",
+    "dairymod:pinecone_from_jungle_temple_chest"
+  ],
+  "replace": false
+}

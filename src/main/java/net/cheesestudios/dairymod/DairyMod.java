@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.cheesestudios.dairymod.block.ModBlocks;
 import net.cheesestudios.dairymod.item.ModCreativeModeTabs;
 import net.cheesestudios.dairymod.item.ModItems;
+import net.cheesestudios.dairymod.loot.ModLootModifiers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,7 +32,8 @@ public class DairyMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus); // register mod items
-        ModBlocks.register(modEventBus);
+        ModBlocks.register(modEventBus); // register mod blocks
+        ModLootModifiers.register(modEventBus); // register mod loot modifiers
         ModCreativeModeTabs.register(modEventBus); // register creative mode tabs
 
         modEventBus.addListener(this::commonSetup);

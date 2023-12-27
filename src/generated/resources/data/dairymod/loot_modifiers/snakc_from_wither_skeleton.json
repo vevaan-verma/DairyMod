@@ -1,0 +1,15 @@
+{
+  "type": "dairymod:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/wither_skeleton"
+    },
+    {
+      "chance": 0.05,
+      "condition": "minecraft:random_chance_with_looting",
+      "looting_multiplier": 2.0
+    }
+  ],
+  "item": "dairymod:wither_skeleton_snakc"
+}

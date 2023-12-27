@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dairymod:block/cheese_slab"
+    },
+    "type=double": {
+      "model": "dairymod:block/cheese_block"
+    },
+    "type=top": {
+      "model": "dairymod:block/cheese_slab_top"
+    }
+  }
+}

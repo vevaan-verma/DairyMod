@@ -1,0 +1,14 @@
+// 1.20.2	2023-12-25T23:28:35.983301	Loot Tables
+1ca3e7b89e2fbdf3d13ffcb4949e518e39d564b9 data/dairymod/loot_tables/blocks/cheese_block.json
+b7cb2d56ac5d00c89c4c61d7f4b2b60c9c3892c0 data/dairymod/loot_tables/blocks/cheese_button.json
+c1d4d7de956f92a0ce08c9c7ecc12bd47e17c11d data/dairymod/loot_tables/blocks/cheese_door.json
+e730891211337b46cd29e9809925bb42fcb99481 data/dairymod/loot_tables/blocks/cheese_fence.json
+3319fe72970aeaa34ae196c058523a20b2fecb99 data/dairymod/loot_tables/blocks/cheese_fence_gate.json
+79be81abf842754b0bab112e7da9cd2d20e4758d data/dairymod/loot_tables/blocks/cheese_pressure_plate.json
+02ce58cbdc58ac8d7abef70ffc7b69446b4c65f2 data/dairymod/loot_tables/blocks/cheese_slab.json
+8e926971ab5241d052bb635beb0f5749024b6e0b data/dairymod/loot_tables/blocks/cheese_stairs.json
+069a56f151891c041abdea1a91a043964aae760f data/dairymod/loot_tables/blocks/cheese_trapdoor.json
+55fc28b6af06c2a42b5476e79ec4e834ea7a2f6c data/dairymod/loot_tables/blocks/cheese_wall.json
+8dd9cc6b9f870d3405bdc1b6235e5098c06b5c44 data/dairymod/loot_tables/blocks/salt_block.json
+c6db7cd179bc5663b531d9fc5f9a3f54e9a30725 data/dairymod/loot_tables/blocks/salt_ore.json
+e5eba4a225014a956f2f191746bee582c6166e2b data/dairymod/loot_tables/blocks/sound_block.json
