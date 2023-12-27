@@ -34,7 +34,7 @@ public class ModBlocks {
 
     // advanced blocks
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
 
     // SPECIAL BLOCKS
     // stairs & slabs

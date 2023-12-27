@@ -27,6 +27,32 @@ public class ModCreativeModeTabs {
 
                         // advanced items
                         output.accept(ModItems.CHEESE_DETECTOR.get());
+                        output.accept(ModItems.CHEESE_STAFF.get());
+
+                        // tools
+                        output.accept(ModItems.CHEESE_SWORD.get());
+                        output.accept(ModItems.CHEESE_PICKAXE.get());
+                        output.accept(ModItems.CHEESE_AXE.get());
+                        output.accept(ModItems.CHEESE_SHOVEL.get());
+                        output.accept(ModItems.CHEESE_HOE.get());
+
+                        // armor
+                        output.accept(ModItems.CHEESE_HELMET.get());
+                        output.accept(ModItems.CHEESE_CHESTPLATE.get());
+                        output.accept(ModItems.CHEESE_LEGGINGS.get());
+                        output.accept(ModItems.CHEESE_BOOTS.get());
+
+                        // food
+                        output.accept(ModItems.CHEESE.get());
+                        output.accept(ModItems.ICE_CREAM.get());
+                        output.accept(ModItems.NACHOS.get());
+
+                        // snakcs
+                        output.accept(ModItems.CREEPER_SNAKC.get());
+                        output.accept(ModItems.ENDERMAN_SNAKC.get());
+                        output.accept(ModItems.PIGLIN_SNAKC.get());
+                        output.accept(ModItems.SKELETON_SNAKC.get());
+                        output.accept(ModItems.WITHER_SKELETON_SNAKC.get());
 
                         // fuel items
                         output.accept(ModItems.PINECONE.get());
@@ -58,11 +84,6 @@ public class ModCreativeModeTabs {
                         // doors
                         output.accept(ModBlocks.CHEESE_DOOR.get());
                         output.accept(ModBlocks.CHEESE_TRAPDOOR.get());
-
-                        // food
-                        output.accept(ModItems.CHEESE.get());
-                        output.accept(ModItems.ICE_CREAM.get());
-                        output.accept(ModItems.NACHOS.get());
 
                     })
                     .build());

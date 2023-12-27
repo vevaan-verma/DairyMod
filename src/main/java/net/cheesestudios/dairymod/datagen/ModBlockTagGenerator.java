@@ -23,16 +23,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
-        // cheese detector detectables
-        this.tag(ModTags.Blocks.CHEESE_DETECTOR_DETECTABLES)
-                .add(ModBlocks.CHEESE_BLOCK.get());
-        //.addTag(Tags.Blocks.ORES) <- for general ores;
-
-        // salt ore tool requirements
+        // pickaxe mineables
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.SALT_ORE.get());
+                .add(ModBlocks.SALT_ORE.get(),
+                        ModBlocks.SOUND_BLOCK.get());
 
-        // salt ore tool requirements
+        // cheese tool mineables
+        this.tag(ModTags.Blocks.NEEDS_CHEESE_TOOL)
+                .add(ModBlocks.SOUND_BLOCK.get());
+
+        // stone tool mineables
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SALT_ORE.get());
 
@@ -46,6 +46,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CHEESE_FENCE_GATE.get());
         this.tag(BlockTags.WALLS)
                 .add(ModBlocks.CHEESE_WALL.get());
+
+        // cheese detector detectables
+        this.tag(ModTags.Blocks.CHEESE_DETECTOR_DETECTABLES)
+                .add(ModBlocks.CHEESE_BLOCK.get());
+        //.addTag(Tags.Blocks.ORES) <- for general ores;
 
     }
 }

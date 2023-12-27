@@ -13,6 +13,7 @@ public class ModTags {
     public static class Blocks {
 
         public static final TagKey<Block> CHEESE_DETECTOR_DETECTABLES = tag("cheese_detector_detectables");
+        public static final TagKey<Block> NEEDS_CHEESE_TOOL = tag("needs_cheese_tool");
 
         private static TagKey<Block> tag(String name) {
 

@@ -33,6 +33,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         // advanced blocks
         this.dropSelf(ModBlocks.SOUND_BLOCK.get());
+        this.add(ModBlocks.SOUND_BLOCK.get(), block -> createCopperLikeOreDrops(ModBlocks.SOUND_BLOCK.get(), ModItems.CHEESE.get()));
 
         // ores
         this.add(ModBlocks.SALT_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.SALT_ORE.get(), ModItems.SALT.get()));
