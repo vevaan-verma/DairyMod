@@ -2,30 +2,41 @@
   "item.dairymod.concentrated_cheese": "Concentrated Cheese",
   "item.dairymod.milk_solids": "Milk Solids",
   "item.dairymod.salt": "Salt",
+  "item.dairymod.pinecone": "Pinecone",
+
   "item.dairymod.cheese_detector": "Cheese Detector",
   "item.dairymod.cheese_staff": "Cheese Staff",
-  "item.dairymod.pinecone": "Pinecone",
+
   "item.dairymod.cheese_sword": "Cheese Sword",
   "item.dairymod.cheese_pickaxe": "Cheese Pickaxe",
   "item.dairymod.cheese_axe": "Cheese Axe",
   "item.dairymod.cheese_shovel": "Cheese Shovel",
   "item.dairymod.cheese_hoe": "Cheese Hoe",
+
   "item.dairymod.cheese_helmet": "Cheese Helmet",
   "item.dairymod.cheese_chestplate": "Cheese Chestplate",
   "item.dairymod.cheese_leggings": "Cheese Leggings",
   "item.dairymod.cheese_boots": "Cheese Boots",
+
   "item.dairymod.cheese": "Cheese",
   "item.dairymod.ice_cream": "Ice Cream",
   "item.dairymod.nachos": "Nachos",
+
   "item.dairymod.creeper_snakc": "Creeper Snakc",
   "item.dairymod.enderman_snakc": "Enderman Snakc",
   "item.dairymod.piglin_snakc": "Piglin Snakc",
   "item.dairymod.skeleton_snakc": "Skeleton Snakc",
   "item.dairymod.wither_skeleton_snakc": "Wither Skeleton Snakc",
+
+  "item.dairymod.cheese_seeds": "Cheese Seeds",
+
+  "block.dairymod.cheese_flower": "Cheese Flower",
+
   "block.dairymod.cheese_block": "Block of Cheese",
   "block.dairymod.salt_block": "Block of Salt",
   "block.dairymod.salt_ore": "Salt Ore",
   "block.dairymod.sound_block": "Sound Block",
+
   "block.dairymod.cheese_stairs": "Cheese Stairs",
   "block.dairymod.cheese_slab": "Cheese Slab",
   "block.dairymod.cheese_button": "Cheese Button",
@@ -35,6 +46,10 @@
   "block.dairymod.cheese_wall": "Cheese Wall",
   "block.dairymod.cheese_door": "Cheese Door",
   "block.dairymod.cheese_trapdoor": "Cheese Trapdoor",
+
   "tooltip.dairymod.cheese_detector.tooltip": "Detects cheese under clicked block",
-  "creativetab.dairy_tab": "Dairy"
+
+  "creativetab.dairy_tab": "Dairy Mod",
+
+  "entity.minecraft.villager.dairymod.cheese_lord": "Cheese Lord"
 }

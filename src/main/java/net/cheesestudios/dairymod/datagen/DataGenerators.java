@@ -18,21 +18,22 @@ public class DataGenerators {
     public static void gatherData(GatherDataEvent event) {
 
         DataGenerator generator = event.getGenerator();
-        PackOutput packOutput = generator.getPackOutput();
-        ExistingFileHelper fileHelper = event.getExistingFileHelper();
-        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
+        PackOutput pOutput = generator.getPackOutput();
+        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> pProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(), new ModRecipeProvider(packOutput));
-        generator.addProvider(event.includeServer(), ModLootTableProvider.create(packOutput));
+        generator.addProvider(event.includeServer(), new ModRecipeProvider(pOutput));
+        generator.addProvider(event.includeServer(), ModLootTableProvider.create(pOutput));
 
-        generator.addProvider(event.includeClient(), new ModBlockStateProvider(packOutput, fileHelper));
-        generator.addProvider(event.includeClient(), new ModItemModelProvider(packOutput, fileHelper));
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(pOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(pOutput, existingFileHelper));
 
         ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
-                new ModBlockTagGenerator(packOutput, lookupProvider, fileHelper));
-        generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), fileHelper));
+                new ModBlockTagGenerator(pOutput, pProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new ModItemTagGenerator(pOutput, pProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
 
-        generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
+        generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(pOutput));
+        generator.addProvider(event.includeServer(), new ModPoiTypeTagsProvider(pOutput, pProvider, existingFileHelper));
 
     }
 }

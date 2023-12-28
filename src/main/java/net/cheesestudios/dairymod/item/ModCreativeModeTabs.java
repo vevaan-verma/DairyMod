@@ -54,6 +54,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SKELETON_SNAKC.get());
                         output.accept(ModItems.WITHER_SKELETON_SNAKC.get());
 
+                        // crop seeds
+                        output.accept(ModItems.CHEESE_SEEDS.get());
+
+                        // flowers
+                        output.accept(ModBlocks.CHEESE_FLOWER.get());
+
                         // fuel items
                         output.accept(ModItems.PINECONE.get());
 

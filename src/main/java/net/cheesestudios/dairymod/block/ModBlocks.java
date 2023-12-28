@@ -1,10 +1,12 @@
 package net.cheesestudios.dairymod.block;
 
 import net.cheesestudios.dairymod.DairyMod;
+import net.cheesestudios.dairymod.block.custom.CheeseCropBlock;
 import net.cheesestudios.dairymod.block.custom.SoundBlock;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -66,6 +68,18 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).sound(SoundType.HONEY_BLOCK).noOcclusion(), BlockSetType.OAK));
     public static final RegistryObject<Block> CHEESE_TRAPDOOR = registerBlock("cheese_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).sound(SoundType.HONEY_BLOCK).noOcclusion(), BlockSetType.OAK));
+
+    // crops
+    public static final RegistryObject<Block> CHEESE_CROP = BLOCKS.register("cheese_crop", // use BLOCKS.register() for crops because there is no associated block item (seeds are block item)
+            () -> new CheeseCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+
+    // flowers
+    public static final RegistryObject<Block> CHEESE_FLOWER = registerBlock("cheese_flower",
+            () -> new FlowerBlock(MobEffects.SATURATION, 5,
+                    BlockBehaviour.Properties.copy(Blocks.OXEYE_DAISY).noOcclusion().noCollission())); // duration is in seconds
+    public static final RegistryObject<Block> POTTED_CHEESE_FLOWER = BLOCKS.register("potted_cheese_flower", // don't want an item to be generated with this, use Blocks.register()
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CHEESE_FLOWER,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_OXEYE_DAISY).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 

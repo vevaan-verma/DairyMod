@@ -5,7 +5,10 @@ import net.cheesestudios.dairymod.block.ModBlocks;
 import net.cheesestudios.dairymod.item.ModCreativeModeTabs;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.cheesestudios.dairymod.loot.ModLootModifiers;
+import net.cheesestudios.dairymod.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -34,6 +37,7 @@ public class DairyMod {
         ModItems.register(modEventBus); // register mod items
         ModBlocks.register(modEventBus); // register mod blocks
         ModLootModifiers.register(modEventBus); // register mod loot modifiers
+        ModVillagers.register(modEventBus); // register mod villagers
         ModCreativeModeTabs.register(modEventBus); // register creative mode tabs
 
         modEventBus.addListener(this::commonSetup);
@@ -45,6 +49,11 @@ public class DairyMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
+        event.enqueueWork(() -> {
+
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CHEESE_FLOWER.getId(), ModBlocks.POTTED_CHEESE_FLOWER);
+
+        });
     }
 
     // Add the example block item to the building blocks tab

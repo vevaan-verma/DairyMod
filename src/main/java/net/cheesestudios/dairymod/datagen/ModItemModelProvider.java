@@ -79,6 +79,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SKELETON_SNAKC);
         simpleItem(ModItems.WITHER_SKELETON_SNAKC);
 
+        // crop seeds
+        simpleItem(ModItems.CHEESE_SEEDS);
+
+        // flowers
+        simpleBlockItemBlockTexture(ModBlocks.CHEESE_FLOWER);
+
         // SPECIAL BLOCK ITEMS
         // stairs & slabs
         evenSimplerBlockItem(ModBlocks.CHEESE_STAIRS);
@@ -111,6 +117,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(DairyMod.MOD_ID, "item/" + item.getId().getPath()));
+
+    }
+
+    // for flowers
+    private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
+
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(DairyMod.MOD_ID, "block/" + item.getId().getPath()));
 
     }
 

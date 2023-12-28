@@ -2,11 +2,17 @@ package net.cheesestudios.dairymod.datagen;
 
 import net.cheesestudios.dairymod.DairyMod;
 import net.cheesestudios.dairymod.block.ModBlocks;
+import net.cheesestudios.dairymod.block.custom.CheeseCropBlock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -18,6 +24,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+        // crops
+        makeCheeseCrop((CropBlock) ModBlocks.CHEESE_CROP.get(), "cheese_stage", "cheese_stage");
+
+        // flowers
+        simpleBlockWithItem(ModBlocks.CHEESE_FLOWER.get(), models().cross(blockTexture(ModBlocks.CHEESE_FLOWER.get()).getPath(),
+                blockTexture(ModBlocks.CHEESE_FLOWER.get())).renderType("cutout"));
+        simpleBlockWithItem(ModBlocks.POTTED_CHEESE_FLOWER.get(), models().singleTexture("potted_cheese_flower",
+                new ResourceLocation("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.CHEESE_FLOWER.get())).renderType("cutout"));
 
         // blocks
         blockWithItem(ModBlocks.CHEESE_BLOCK);
@@ -53,6 +69,23 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
 
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+
+    }
+
+    public void makeCheeseCrop(CropBlock block, String modelName, String textureName) {
+
+        Function<BlockState, ConfiguredModel[]> function = state -> cheeseCropStates(state, block, modelName, textureName);
+        getVariantBuilder(block).forAllStates(function);
+
+    }
+
+    private ConfiguredModel[] cheeseCropStates(BlockState state, CropBlock block, String modelName, String textureName) {
+
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((CheeseCropBlock) block).getAgeProperty()),
+                new ResourceLocation(DairyMod.MOD_ID, "block/" + textureName + state.getValue(((CheeseCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
 
     }
 }

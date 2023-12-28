@@ -1,6 +1,7 @@
 package net.cheesestudios.dairymod.item;
 
 import net.cheesestudios.dairymod.DairyMod;
+import net.cheesestudios.dairymod.block.ModBlocks;
 import net.cheesestudios.dairymod.item.custom.CheeseDetectorItem;
 import net.cheesestudios.dairymod.item.custom.FuelItem;
 import net.cheesestudios.dairymod.item.custom.ModArmorItem;
@@ -71,6 +72,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.SKELETON_SNAKC)));
     public static final RegistryObject<Item> WITHER_SKELETON_SNAKC = ITEMS.register("wither_skeleton_snakc",
             () -> new Item(new Item.Properties().food(ModFoods.WITHER_SKELETON_SNAKC)));
+
+    // crop seeds
+    public static final RegistryObject<Item> CHEESE_SEEDS = ITEMS.register("cheese_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CHEESE_CROP.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
 

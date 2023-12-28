@@ -1,5 +1,5 @@
-// 1.20.2	2023-12-26T23:13:40.5528226	Global Loot Modifiers : dairymod
-a8f7c9185482e21ae24e7499078cf92912d77362 data/dairymod/loot_modifiers/cheese_staff_from_suspicious_sand.json
+// 1.20.2	2023-12-27T16:55:23.7074134	Global Loot Modifiers : dairymod
+a8f7c9185482e21ae24e7499078cf92912d77362 data/dairymod/loot_modifiers/cheese_staff_from_suspicious_block.json
 00f4265f9b4115d40998fb2ec656e74813335b0b data/dairymod/loot_modifiers/nachos_from_pillager_outpost_chest.json
 6d21ec19bbab5ae8310e2edaa34eb0a3f6e54054 data/dairymod/loot_modifiers/pinecone_from_jungle_temple_chest.json
 cf2931cc5ac15d223799ea85efdecf810c5fce47 data/dairymod/loot_modifiers/pinecone_from_oak_leaf.json
@@ -8,4 +8,4 @@ cf2931cc5ac15d223799ea85efdecf810c5fce47 data/dairymod/loot_modifiers/pinecone_f
 3618eac4024ebaed741a5c47713b45a1f93e0664 data/dairymod/loot_modifiers/snakc_from_piglin.json
 86415f5a08762528d756bb2cfb833075cebfa12f data/dairymod/loot_modifiers/snakc_from_skeleton.json
 0bec254fe6dea1ae51ab293126a1eee82978eaf6 data/dairymod/loot_modifiers/snakc_from_wither_skeleton.json
-70643a2a1a71bd469ea0e1de4b53e4188a2c09e6 data/forge/loot_modifiers/global_loot_modifiers.json
+3f1c357f619f6a0f8cf14707e195db9c2895c0e2 data/forge/loot_modifiers/global_loot_modifiers.json
