@@ -1,5 +1,5 @@
-// 1.20.2	2023-12-26T10:23:40.4336543	Tags for minecraft:block mod id dairymod
-7898eee01ea03325a9b353e33e0c5979ce14fe05 data/dairymod/tags/blocks/cheese_detector_detectables.json
+// 1.20.2	2023-12-28T00:16:04.5957068	Tags for minecraft:block mod id dairymod
+2912ad03338c1cedab80fdb2cc61baccec1dd13e data/dairymod/tags/blocks/cheese_detector_detectables.json
 71a0020683c7336a1df70bb5501f5f02d216304b data/dairymod/tags/blocks/needs_cheese_tool.json
 d02b7130fa5bff710bef80cf69b11da9f4ce3fda data/minecraft/tags/blocks/fences.json
 0bb5a4c602ff238b46e228785aaea402f7199b0e data/minecraft/tags/blocks/fence_gates.json

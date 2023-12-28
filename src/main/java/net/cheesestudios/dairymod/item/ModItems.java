@@ -5,6 +5,7 @@ import net.cheesestudios.dairymod.block.ModBlocks;
 import net.cheesestudios.dairymod.item.custom.CheeseDetectorItem;
 import net.cheesestudios.dairymod.item.custom.FuelItem;
 import net.cheesestudios.dairymod.item.custom.ModArmorItem;
+import net.cheesestudios.dairymod.sound.ModSounds;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -24,6 +25,19 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PINECONE = ITEMS.register("pinecone",
             () -> new FuelItem(new Item.Properties(), 120));
+
+    // music discs
+    // length is in ticks (seconds * 20)
+    public static final RegistryObject<Item> AFTER_HOURS_MUSIC_DISC = ITEMS.register("after_hours_music_disc",
+            () -> new RecordItem(6, ModSounds.AFTER_HOURS, new Item.Properties().stacksTo(1), 7220));
+    public static final RegistryObject<Item> GREEDY_MUSIC_DISC = ITEMS.register("greedy_music_disc",
+            () -> new RecordItem(6, ModSounds.GREEDY, new Item.Properties().stacksTo(1), 4280));
+    public static final RegistryObject<Item> HOUDINI_EXTENDED_MUSIC_DISC = ITEMS.register("houdini_extended_music_disc",
+            () -> new RecordItem(6, ModSounds.HOUDINI_EXTENDED, new Item.Properties().stacksTo(1), 7080));
+    public static final RegistryObject<Item> IN_THE_NIGHT_MUSIC_DISC = ITEMS.register("in_the_night_music_disc",
+            () -> new RecordItem(6, ModSounds.IN_THE_NIGHT, new Item.Properties().stacksTo(1), 4700));
+    public static final RegistryObject<Item> POPULAR_MUSIC_DISC = ITEMS.register("popular_music_disc",
+            () -> new RecordItem(6, ModSounds.POPULAR, new Item.Properties().stacksTo(1), 4300));
 
     // advanced items
     public static final RegistryObject<Item> CHEESE_DETECTOR = ITEMS.register("cheese_detector",

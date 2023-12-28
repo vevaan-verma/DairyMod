@@ -25,6 +25,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.MILK_SOLIDS.get());
                         output.accept(ModItems.SALT.get());
 
+                        // music discs
+                        output.accept(ModItems.AFTER_HOURS_MUSIC_DISC.get());
+                        output.accept(ModItems.GREEDY_MUSIC_DISC.get());
+                        output.accept(ModItems.HOUDINI_EXTENDED_MUSIC_DISC.get());
+                        output.accept(ModItems.IN_THE_NIGHT_MUSIC_DISC.get());
+                        output.accept(ModItems.POPULAR_MUSIC_DISC.get());
+
                         // advanced items
                         output.accept(ModItems.CHEESE_DETECTOR.get());
                         output.accept(ModItems.CHEESE_STAFF.get());

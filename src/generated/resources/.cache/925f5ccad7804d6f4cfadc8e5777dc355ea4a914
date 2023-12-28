@@ -1,4 +1,5 @@
-// 1.20.2	2023-12-27T19:24:16.3527188	Item Models: dairymod
+// 1.20.2	2023-12-28T01:13:11.6341783	Item Models: dairymod
+234ac5ca48d538d92140e65e528be055ae121a47 assets/dairymod/models/item/after_hours_music_disc.json
 a63af2494b18fecf8e40a59e701e4d17768db5c5 assets/dairymod/models/item/cheese.json
 33a562aac975285eb5f02bdf24a4b6b23410c78a assets/dairymod/models/item/cheese_axe.json
 7910cfe70b699f5e02b1961f77e6d5671568c2ab assets/dairymod/models/item/cheese_boots.json
@@ -64,11 +65,15 @@ ff3655d1ad5d8eb3f77b17002ad8aefc75ee8cae assets/dairymod/models/item/cheese_wall
 1f74e57b8dea59b3e0b059cc085038a427961562 assets/dairymod/models/item/concentrated_cheese.json
 6875b31b13007fd95f49ac5c702f0f1fa8c08e6a assets/dairymod/models/item/creeper_snakc.json
 afe6b46859b87732e9c93323ec49ffaee43c80cb assets/dairymod/models/item/enderman_snakc.json
+b3845ddda0ac11ce6af5f042cc8c09a83860973a assets/dairymod/models/item/greedy_music_disc.json
+8e25f0427041bd700f463562e9ef024b53bfc31e assets/dairymod/models/item/houdini_extended_music_disc.json
 0de228cbcf168976cf88db04c7e30ad9a942e660 assets/dairymod/models/item/ice_cream.json
+4f4e2461dbb57f7dea0b3f160661a3fe4fb76f28 assets/dairymod/models/item/in_the_night_music_disc.json
 58891d70b6aecc930159fc1929efc3e3aae33f2a assets/dairymod/models/item/milk_solids.json
 18c811813ec23c9ca0b94eaf3892875155c36644 assets/dairymod/models/item/nachos.json
 82cb0f0352d1893a0faba5a3a34c6bf54be5ebeb assets/dairymod/models/item/piglin_snakc.json
 0b73c2dc50c47dced50c6becae2f165ad759f311 assets/dairymod/models/item/pinecone.json
+bc1c77cfdaadaeed37c8405538c26067f261c1b3 assets/dairymod/models/item/popular_music_disc.json
 e1e6f0dbedddbc5a8f58c0da3bc8e6c567ebf251 assets/dairymod/models/item/salt.json
 cd9048250402db2cd764c41cd80e558a7e19d580 assets/dairymod/models/item/skeleton_snakc.json
 20b5ae27682303cfd69ba3dabf306eddc13d0646 assets/dairymod/models/item/wither_skeleton_snakc.json

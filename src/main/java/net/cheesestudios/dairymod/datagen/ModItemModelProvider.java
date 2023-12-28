@@ -53,6 +53,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SALT);
         simpleItem(ModItems.PINECONE);
 
+        // music discs
+        simpleItem(ModItems.AFTER_HOURS_MUSIC_DISC);
+        simpleItem(ModItems.GREEDY_MUSIC_DISC);
+        simpleItem(ModItems.HOUDINI_EXTENDED_MUSIC_DISC);
+        simpleItem(ModItems.IN_THE_NIGHT_MUSIC_DISC);
+        simpleItem(ModItems.POPULAR_MUSIC_DISC);
+
         // advanced items
         simpleItem(ModItems.CHEESE_DETECTOR);
 

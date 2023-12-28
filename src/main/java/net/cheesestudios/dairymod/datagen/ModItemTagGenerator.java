@@ -21,13 +21,29 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.Provider pProvider) {
 
+        // music discs
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.AFTER_HOURS_MUSIC_DISC.get(),
+                        ModItems.GREEDY_MUSIC_DISC.get(),
+                        ModItems.HOUDINI_EXTENDED_MUSIC_DISC.get(),
+                        ModItems.IN_THE_NIGHT_MUSIC_DISC.get(),
+                        ModItems.POPULAR_MUSIC_DISC.get());
+
+        this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS) // for dropping when creeper is shot by skeleton
+                .add(ModItems.AFTER_HOURS_MUSIC_DISC.get(),
+                        ModItems.GREEDY_MUSIC_DISC.get(),
+                        ModItems.HOUDINI_EXTENDED_MUSIC_DISC.get(),
+                        ModItems.IN_THE_NIGHT_MUSIC_DISC.get(),
+                        ModItems.POPULAR_MUSIC_DISC.get());
+
+        // armor
         this.tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.CHEESE_HELMET.get(),
                         ModItems.CHEESE_CHESTPLATE.get(),
                         ModItems.CHEESE_LEGGINGS.get(),
                         ModItems.CHEESE_BOOTS.get());
-        
+
     }
 }

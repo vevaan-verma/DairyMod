@@ -1,0 +1,78 @@
+{
+  "sound_block_break": {
+    "subtitle": "sounds.dairymod.sound_block_break",
+    "sounds": [
+      "dairymod:sound_block_break"
+    ]
+  },
+  "sound_block_step": {
+    "subtitle": "sounds.dairymod.sound_block_step",
+    "sounds": [
+      "dairymod:sound_block_step"
+    ]
+  },
+  "sound_block_place": {
+    "subtitle": "sounds.dairymod.sound_block_place",
+    "sounds": [
+      "dairymod:sound_block_place"
+    ]
+  },
+  "sound_block_hit": {
+    "subtitle": "sounds.dairymod.sound_block_hit",
+    "sounds": [
+      "dairymod:sound_block_hit"
+    ]
+  },
+  "sound_block_fall": {
+    "subtitle": "sounds.dairymod.sound_block_fall",
+    "sounds": [
+      "dairymod:sound_block_fall"
+    ]
+  },
+  "cheese_detector_found_cheese": {
+    "subtitles": "sounds.dairymod.cheese_detector_found_cheese",
+    "sounds": [
+      "dairymod:cheese_detector_found_cheese"
+    ]
+  },
+  "after_hours": {
+    "sounds": [
+      {
+        "name": "dairymod:after_hours",
+        "stream": true
+      }
+    ]
+  },
+  "greedy": {
+    "sounds": [
+      {
+        "name": "dairymod:greedy",
+        "stream": true
+      }
+    ]
+  },
+  "houdini_extended": {
+    "sounds": [
+      {
+        "name": "dairymod:houdini_extended",
+        "stream": true
+      }
+    ]
+  },
+  "in_the_night": {
+    "sounds": [
+      {
+        "name": "dairymod:in_the_night",
+        "stream": true
+      }
+    ]
+  },
+  "popular": {
+    "sounds": [
+      {
+        "name": "dairymod:popular",
+        "stream": true
+      }
+    ]
+  }
+}

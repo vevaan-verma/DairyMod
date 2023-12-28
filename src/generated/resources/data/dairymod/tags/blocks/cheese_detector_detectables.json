@@ -1,5 +1,17 @@
 {
   "values": [
-    "dairymod:cheese_block"
+    "dairymod:cheese_block",
+    "dairymod:cheese_stairs",
+    "dairymod:cheese_slab",
+    "dairymod:cheese_button",
+    "dairymod:cheese_pressure_plate",
+    "dairymod:cheese_fence",
+    "dairymod:cheese_fence_gate",
+    "dairymod:cheese_wall",
+    "dairymod:cheese_door",
+    "dairymod:cheese_trapdoor",
+    "dairymod:cheese_crop",
+    "dairymod:cheese_flower",
+    "dairymod:potted_cheese_flower"
   ]
 }

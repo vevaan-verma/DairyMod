@@ -20,9 +20,9 @@ public class ModVillagers {
 
     /*
     GUIDE:
-        new PoiType(ImmutableSet.copyOf(BLOCK.get().getStateDefinition().getPossibleStates()): BLOCK is villager workstation
-        maxTickets: number of villagers that can take the job from the workstation
-        validRange: max range of villager to take the job
+        - new PoiType(ImmutableSet.copyOf(BLOCK.get().getStateDefinition().getPossibleStates()): BLOCK is villager workstation
+        - maxTickets: number of villagers that can take the job from the workstation
+        - validRange: max range of villager to take the job
      */
 
     public static final RegistryObject<PoiType> CHEESE_POI = POI_TYPES.register("cheese_poi",

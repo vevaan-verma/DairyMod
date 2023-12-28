@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dairymod:item/in_the_night_music_disc"
+  }
+}

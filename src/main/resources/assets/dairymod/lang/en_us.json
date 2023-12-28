@@ -4,6 +4,17 @@
   "item.dairymod.salt": "Salt",
   "item.dairymod.pinecone": "Pinecone",
 
+  "item.dairymod.after_hours_music_disc": "#1",
+  "item.dairymod.after_hours_music_disc.desc": "#1",
+  "item.dairymod.greedy_music_disc": "#2",
+  "item.dairymod.greedy_music_disc.desc": "#2",
+  "item.dairymod.houdini_extended_music_disc": "#3",
+  "item.dairymod.houdini_extended_music_disc.desc": "#3",
+  "item.dairymod.in_the_night_music_disc": "#4",
+  "item.dairymod.in_the_night_music_disc.desc": "#4",
+  "item.dairymod.popular_music_disc": "#5",
+  "item.dairymod.popular_music_disc.desc": "#5",
+
   "item.dairymod.cheese_detector": "Cheese Detector",
   "item.dairymod.cheese_staff": "Cheese Staff",
 
@@ -51,5 +62,7 @@
 
   "creativetab.dairy_tab": "Dairy Mod",
 
-  "entity.minecraft.villager.dairymod.cheese_lord": "Cheese Lord"
+  "entity.minecraft.villager.dairymod.cheese_lord": "Cheese Lord",
+
+  "sounds.dairymod.cheese_detector_found_cheese": "Cheese Detector Ping"
 }

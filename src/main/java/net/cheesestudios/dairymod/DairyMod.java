@@ -5,6 +5,7 @@ import net.cheesestudios.dairymod.block.ModBlocks;
 import net.cheesestudios.dairymod.item.ModCreativeModeTabs;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.cheesestudios.dairymod.loot.ModLootModifiers;
+import net.cheesestudios.dairymod.sound.ModSounds;
 import net.cheesestudios.dairymod.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -36,6 +37,7 @@ public class DairyMod {
 
         ModItems.register(modEventBus); // register mod items
         ModBlocks.register(modEventBus); // register mod blocks
+        ModSounds.register(modEventBus); // register mod sounds
         ModLootModifiers.register(modEventBus); // register mod loot modifiers
         ModVillagers.register(modEventBus); // register mod villagers
         ModCreativeModeTabs.register(modEventBus); // register creative mode tabs

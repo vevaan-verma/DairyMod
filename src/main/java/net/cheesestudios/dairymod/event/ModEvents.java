@@ -28,13 +28,13 @@ public class ModEvents {
 
         /*
         GUIDE:
-            .get(index): index is villager level
-            first itemstack: item to be traded
-            second itemstack: item to trade for
-            pMaxUses: maximum trades
-            pXp: villager xp gained from trade
-            pPriceMultiplier: multiplier based on demand
-            more trades = less likely for one trade to show up
+            - .get(index): index is villager level
+            - first itemstack: item to be traded
+            - second itemstack: item to trade for
+            - pMaxUses: maximum trades
+            - pXp: villager xp gained from trade
+            - pPriceMultiplier: multiplier based on demand
+            - more trades = less likely for one trade to show up
         */
 
         if (event.getType() == ModVillagers.CHEESE_LORD.get()) {
@@ -146,8 +146,8 @@ public class ModEvents {
 
         /*
         GUIDE:
-            xp doesn't impact wandering traders
-            more trades = less likely for one trade to show up
+            - xp doesn't impact wandering traders
+            - more trades = less likely for one trade to show up
         */
 
         // generic trades

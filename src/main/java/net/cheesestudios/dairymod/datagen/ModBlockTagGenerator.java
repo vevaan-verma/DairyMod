@@ -49,7 +49,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         // cheese detector detectables
         this.tag(ModTags.Blocks.CHEESE_DETECTOR_DETECTABLES)
-                .add(ModBlocks.CHEESE_BLOCK.get());
+                .add(ModBlocks.CHEESE_BLOCK.get(),
+                        ModBlocks.CHEESE_STAIRS.get(),
+                        ModBlocks.CHEESE_SLAB.get(),
+                        ModBlocks.CHEESE_BUTTON.get(),
+                        ModBlocks.CHEESE_PRESSURE_PLATE.get(),
+                        ModBlocks.CHEESE_FENCE.get(),
+                        ModBlocks.CHEESE_FENCE_GATE.get(),
+                        ModBlocks.CHEESE_WALL.get(),
+                        ModBlocks.CHEESE_DOOR.get(),
+                        ModBlocks.CHEESE_TRAPDOOR.get(),
+                        ModBlocks.CHEESE_CROP.get(),
+                        ModBlocks.CHEESE_FLOWER.get(),
+                        ModBlocks.POTTED_CHEESE_FLOWER.get());
         //.addTag(Tags.Blocks.ORES) <- for general ores;
 
     }

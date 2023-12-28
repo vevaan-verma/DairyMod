@@ -1,10 +1,12 @@
 package net.cheesestudios.dairymod.item.custom;
 
 import net.cheesestudios.dairymod.block.ModBlocks;
+import net.cheesestudios.dairymod.sound.ModSounds;
 import net.cheesestudios.dairymod.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -44,6 +46,11 @@ public class CheeseDetectorItem extends Item {
 
                     outputBlockCoordinates(clickedPos.below(i), player, state.getBlock());
                     blockFound = true;
+
+                    // play success sound
+                    pContext.getLevel().playSeededSound(null, clickedPos.getX(), clickedPos.getY(), clickedPos.getZ(), // player parameter is players that are ignored, pass in null
+                            ModSounds.CHEESE_DETECTOR_FOUND_CHEESE.get(), SoundSource.BLOCKS, 1f, 1f, 0);
+
                     break;
 
                 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dairymod:item/houdini_extended_music_disc"
+  }
+}

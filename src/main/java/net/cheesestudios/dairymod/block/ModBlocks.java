@@ -4,6 +4,7 @@ import net.cheesestudios.dairymod.DairyMod;
 import net.cheesestudios.dairymod.block.custom.CheeseCropBlock;
 import net.cheesestudios.dairymod.block.custom.SoundBlock;
 import net.cheesestudios.dairymod.item.ModItems;
+import net.cheesestudios.dairymod.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -36,7 +37,7 @@ public class ModBlocks {
 
     // advanced blocks
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops().sound(ModSounds.SOUND_BLOCK_SOUNDS)));
 
     // SPECIAL BLOCKS
     // stairs & slabs
@@ -63,7 +64,7 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).sound(SoundType.HONEY_BLOCK)));
 
     // doors
-    // IF YOU DON"T COPY A DOOR BLOCK< USE .noOcclusion()
+    // IF YOU DON"T COPY A DOOR BLOCK USE .noOcclusion()
     public static final RegistryObject<Block> CHEESE_DOOR = registerBlock("cheese_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).sound(SoundType.HONEY_BLOCK).noOcclusion(), BlockSetType.OAK));
     public static final RegistryObject<Block> CHEESE_TRAPDOOR = registerBlock("cheese_trapdoor",
