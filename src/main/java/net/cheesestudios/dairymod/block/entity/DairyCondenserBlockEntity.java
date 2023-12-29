@@ -6,6 +6,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -34,7 +37,17 @@ public class DairyCondenserBlockEntity extends BlockEntity implements MenuProvid
     private static final int INPUT_SLOT2 = 1;
     private static final int OUTPUT_SLOT = 2;
 
-    private final ItemStackHandler itemHandler = new ItemStackHandler(3); // amount of slots in gui
+    private final ItemStackHandler itemHandler = new ItemStackHandler(3) { // amount of slots in gui
+
+        @Override
+        protected void onContentsChanged(int slot) {
+
+            setChanged();
+            if (!level.isClientSide())
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3); // synchronizes item handler changes
+
+        }
+    };
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -76,6 +89,15 @@ public class DairyCondenserBlockEntity extends BlockEntity implements MenuProvid
 
             }
         };
+    }
+
+    public ItemStack getRenderStack() {
+
+        if (this.itemHandler.getStackInSlot(OUTPUT_SLOT).isEmpty())
+            return this.itemHandler.getStackInSlot(INPUT_SLOT1);
+        else
+            return this.itemHandler.getStackInSlot(OUTPUT_SLOT);
+
     }
 
     // allows other mods and the game to know that this block has a certain capability
@@ -239,6 +261,21 @@ public class DairyCondenserBlockEntity extends BlockEntity implements MenuProvid
     private void resetProgress() {
 
         progress = 0;
+
+    }
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+
+        return ClientboundBlockEntityDataPacket.create(this);
+
+    }
+
+    @Override
+    public CompoundTag getUpdateTag() {
+
+        return saveWithoutMetadata();
 
     }
 }
