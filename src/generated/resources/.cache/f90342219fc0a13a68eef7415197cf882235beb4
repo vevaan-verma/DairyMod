@@ -1,4 +1,4 @@
-// 1.20.2	2023-12-27T19:24:16.3504661	Block States: dairymod
+// 1.20.1	2023-12-28T15:21:59.1302362	Block States: dairymod
 86d74b574a8dad850f5e6fe1a57019169f5d729c assets/dairymod/blockstates/cheese_block.json
 e8a55b460b0aa0a64efd7eac08eb3624461bcbe0 assets/dairymod/blockstates/cheese_button.json
 8a6441671a0e33f95396d2ca7ae464c237f1f1ec assets/dairymod/blockstates/cheese_crop.json
@@ -11,6 +11,7 @@ a1b4482c13de4d6e46c639e4eae93c1da8cd5c58 assets/dairymod/blockstates/cheese_pres
 dba3c9793b9908e666316013e6a0db1044c2ae5d assets/dairymod/blockstates/cheese_stairs.json
 ce4255e4c4652a7156bc9912e738103335362888 assets/dairymod/blockstates/cheese_trapdoor.json
 91e15dfb168eaa18a564310fd832a09dc4e5a8e5 assets/dairymod/blockstates/cheese_wall.json
+6da44952a29cdf173aebdf31cbb0bfa810c422c8 assets/dairymod/blockstates/dairy_condenser.json
 2138094342903e3fc7a94358d6f4df0c1a0b8f1b assets/dairymod/blockstates/potted_cheese_flower.json
 9ad70e772e8149cc7260d0cff40e5f501281c4a4 assets/dairymod/blockstates/salt_block.json
 b5504c07e8c5df1d8152dfc4717ccb936aee614e assets/dairymod/blockstates/salt_ore.json
@@ -56,6 +57,7 @@ dbd60b2e603336ef3904d550791a28e4fbd40054 assets/dairymod/models/block/potted_che
 1883db9fec1f616553dcb2b3a8b0fbf00820b4f1 assets/dairymod/models/block/sound_block.json
 c8f8ef6be96db673b39cae7dee1e73254b8335aa assets/dairymod/models/item/cheese_block.json
 215fc502289c8bbce1daad30116e3243cc71d5ad assets/dairymod/models/item/cheese_flower.json
+e9512ec800b5abc380b3edf1d2e8569d973c2871 assets/dairymod/models/item/dairy_condenser.json
 732fce5e27e6c40f72dee9f4b27b881a99167f5e assets/dairymod/models/item/potted_cheese_flower.json
 f19b7daddb648327c9fbe62a26991012ff84b7e8 assets/dairymod/models/item/salt_block.json
 c0e2c4a2563ccefd64979488dfe599a3fb76fc5e assets/dairymod/models/item/salt_ore.json

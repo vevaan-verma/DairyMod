@@ -98,6 +98,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CHEESE_DOOR.get());
                         output.accept(ModBlocks.CHEESE_TRAPDOOR.get());
 
+                        // block entities
+                        output.accept(ModBlocks.DAIRY_CONDENSER.get());
+
                     })
                     .build());
 

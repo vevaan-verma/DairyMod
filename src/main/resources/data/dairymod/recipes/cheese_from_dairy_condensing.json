@@ -1,0 +1,15 @@
+{
+  "type": "dairymod:dairy_condensing",
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "dairymod:salt"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "dairymod:cheese"
+  }
+}

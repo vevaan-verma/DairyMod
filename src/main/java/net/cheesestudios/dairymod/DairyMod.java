@@ -2,11 +2,16 @@ package net.cheesestudios.dairymod;
 
 import com.mojang.logging.LogUtils;
 import net.cheesestudios.dairymod.block.ModBlocks;
+import net.cheesestudios.dairymod.block.entity.ModBlockEntities;
 import net.cheesestudios.dairymod.item.ModCreativeModeTabs;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.cheesestudios.dairymod.loot.ModLootModifiers;
+import net.cheesestudios.dairymod.recipe.ModRecipes;
+import net.cheesestudios.dairymod.screen.DairyCondenserScreen;
+import net.cheesestudios.dairymod.screen.ModMenuTypes;
 import net.cheesestudios.dairymod.sound.ModSounds;
 import net.cheesestudios.dairymod.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -37,6 +42,9 @@ public class DairyMod {
 
         ModItems.register(modEventBus); // register mod items
         ModBlocks.register(modEventBus); // register mod blocks
+        ModBlockEntities.register(modEventBus); // register mod block entities
+        ModRecipes.register(modEventBus); // register mod recipes
+        ModMenuTypes.register(modEventBus); // register mod menu types
         ModSounds.register(modEventBus); // register mod sounds
         ModLootModifiers.register(modEventBus); // register mod loot modifiers
         ModVillagers.register(modEventBus); // register mod villagers
@@ -86,6 +94,7 @@ public class DairyMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
+            MenuScreens.register(ModMenuTypes.DAIRY_CONDENSER_MENU.get(), DairyCondenserScreen::new);
 
         }
     }

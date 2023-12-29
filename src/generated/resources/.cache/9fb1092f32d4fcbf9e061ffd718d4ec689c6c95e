@@ -1,11 +1,11 @@
-// 1.20.2	2023-12-24T18:15:21.2796797	Recipes
-30e047fadcf0467005bca22eae628ff3cd518c44 data/dairymod/advancements/recipes/misc/cheese.json
-efa45732658ca61a7b9644812ed272b4e5a40d26 data/dairymod/advancements/recipes/misc/cheese_block.json
-8d8285c02d2bab984dd0d2f005f8e546b3b64c71 data/dairymod/advancements/recipes/misc/salt_block.json
-e363d716bc0191bb7d3552985bdfe1a96748ec30 data/dairymod/advancements/recipes/misc/salt_from_blasting_salt.json
-18c34e280e1c77a7f1e3e314384c971189161d1c data/dairymod/advancements/recipes/misc/salt_from_blasting_salt_ore.json
-2e25a57d8ee2d6b5ab1ceffd72dc2b463d0f7bcf data/dairymod/advancements/recipes/misc/salt_from_smelting_salt.json
-a7a72152201454d45be65b7be42399ec1f9abcbf data/dairymod/advancements/recipes/misc/salt_from_smelting_salt_ore.json
+// 1.20.1	2023-12-28T15:21:59.132993	Recipes
+2246b165b0f80e9d8f99825ad041084b3325525a data/dairymod/advancements/recipes/misc/cheese.json
+0b64962dd7157172fc0b3b79e19f74999a58685b data/dairymod/advancements/recipes/misc/cheese_block.json
+e475ede5ed31a82193527c30291781be930ab8b7 data/dairymod/advancements/recipes/misc/salt_block.json
+54d87fc970b45f2586c3fbc8ccc0d59b58cbdbcc data/dairymod/advancements/recipes/misc/salt_from_blasting_salt.json
+7896b742160d2be9c0832271eb7f46134324724f data/dairymod/advancements/recipes/misc/salt_from_blasting_salt_ore.json
+f553f1a5d379a6853ab6ff2a53165aeb39d10e9d data/dairymod/advancements/recipes/misc/salt_from_smelting_salt.json
+6c710b1dee7224067540030cb12e8b8615c0c532 data/dairymod/advancements/recipes/misc/salt_from_smelting_salt_ore.json
 61ebb7c861f0f3df33653a4f856d390f0c85b99f data/dairymod/recipes/cheese.json
 5e5912184b79dfde03ff89a8895cda14d1616f83 data/dairymod/recipes/cheese_block.json
 003fbe54e846be28882355a3548ee9c311130961 data/dairymod/recipes/salt_block.json

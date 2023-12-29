@@ -1,6 +1,5 @@
 package net.cheesestudios.dairymod.item.custom;
 
-import net.cheesestudios.dairymod.block.ModBlocks;
 import net.cheesestudios.dairymod.sound.ModSounds;
 import net.cheesestudios.dairymod.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
@@ -56,11 +55,9 @@ public class CheeseDetectorItem extends Item {
                 }
             }
 
-            if (!blockFound) {
+            if (!blockFound)
+                player.sendSystemMessage(Component.literal("Cheese not detected!"));
 
-                player.sendSystemMessage(Component.literal(I18n.get(ModBlocks.CHEESE_BLOCK.get().getDescriptionId()) + " not found!"));
-
-            }
         }
 
         pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(), player -> player.broadcastBreakEvent(player.getUsedItemHand()));

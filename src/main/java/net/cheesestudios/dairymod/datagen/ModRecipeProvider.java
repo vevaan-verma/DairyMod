@@ -13,6 +13,7 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
@@ -26,10 +27,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput) {
+    protected void buildRecipes(Consumer<FinishedRecipe> pConsumer) {
 
-        oreSmelting(recipeOutput, SALT_SMELTABLES, RecipeCategory.MISC, ModItems.SALT.get(), 0.25f, 200, "salt");
-        oreBlasting(recipeOutput, SALT_SMELTABLES, RecipeCategory.MISC, ModItems.SALT.get(), 0.25f, 100, "salt");
+        oreSmelting(pConsumer, SALT_SMELTABLES, RecipeCategory.MISC, ModItems.SALT.get(), 0.25f, 200, "salt");
+        oreBlasting(pConsumer, SALT_SMELTABLES, RecipeCategory.MISC, ModItems.SALT.get(), 0.25f, 100, "salt");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SALT_BLOCK.get())
                 .pattern("SSS")
@@ -37,33 +38,33 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSS")
                 .define('S', ModItems.SALT.get())
                 .unlockedBy(getHasName(ModItems.SALT.get()), has(ModItems.SALT.get()))
-                .save(recipeOutput);
+                .save(pConsumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModBlocks.CHEESE_BLOCK.get(), 1)
                 .requires(ModItems.CHEESE.get())
                 .unlockedBy(getHasName(ModItems.CHEESE.get()), has(ModItems.CHEESE.get()))
-                .save(recipeOutput);
+                .save(pConsumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CHEESE.get(), 4)
                 .requires(ModBlocks.CHEESE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.CHEESE_BLOCK.get()), has(ModBlocks.CHEESE_BLOCK.get()))
-                .save(recipeOutput);
+                .save(pConsumer);
 
     }
 
-    protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+    protected static void oreSmelting(Consumer<FinishedRecipe> pConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
 
-        oreCooking(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
-
-    }
-
-    protected static void oreBlasting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
-
-        oreCooking(pRecipeOutput, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+        oreCooking(pConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
 
     }
 
-    private static void oreCooking(RecipeOutput pRecipeOutput, RecipeSerializer<? extends AbstractCookingRecipe> pSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix) {
+    protected static void oreBlasting(Consumer<FinishedRecipe> pConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+
+        oreCooking(pConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+
+    }
+
+    protected static void oreCooking(Consumer<FinishedRecipe> pConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix) {
 
         Iterator var9 = pIngredients.iterator();
 
@@ -72,7 +73,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             ItemLike itemlike = (ItemLike) var9.next();
             SimpleCookingRecipeBuilder.generic(Ingredient.of(new ItemLike[]{itemlike}), pCategory, pResult, pExperience, pCookingTime, pSerializer)
                     .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pRecipeOutput, DairyMod.MOD_ID + ":" + getItemName(pResult) + pSuffix + "_" + getItemName(itemlike)); // add mod id
+                    .save(pConsumer, DairyMod.MOD_ID + ":" + getItemName(pResult) + pSuffix + "_" + getItemName(itemlike)); // add mod id
 
         }
     }

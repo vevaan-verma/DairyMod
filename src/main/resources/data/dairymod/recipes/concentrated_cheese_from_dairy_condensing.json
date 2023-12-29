@@ -1,0 +1,15 @@
+{
+  "type": "dairymod:dairy_condensing",
+  "ingredients": [
+    {
+      "item": "dairymod:cheese"
+    },
+    {
+      "item": "dairymod:salt"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "dairymod:concentrated_cheese"
+  }
+}

@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -63,6 +64,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // doors
         doorBlockWithRenderType((DoorBlock) ModBlocks.CHEESE_DOOR.get(), modLoc("block/cheese_door_bottom"), modLoc("block/cheese_door_top"), "cutout");
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.CHEESE_TRAPDOOR.get(), modLoc("block/cheese_trapdoor"), true, "cutout");
+
+        // block entities
+        simpleBlockWithItem(ModBlocks.DAIRY_CONDENSER.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/dairy_condenser"))); // use model file because blockbench gives json file not texture
 
     }
 

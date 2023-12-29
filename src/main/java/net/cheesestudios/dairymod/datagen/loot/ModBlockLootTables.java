@@ -74,6 +74,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createDoorTable(ModBlocks.CHEESE_DOOR.get()));
         this.dropSelf(ModBlocks.CHEESE_TRAPDOOR.get());
 
+        // block entities
+        this.dropSelf(ModBlocks.DAIRY_CONDENSER.get());
+
     }
 
     @Override

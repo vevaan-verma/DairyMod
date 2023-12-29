@@ -2,6 +2,7 @@ package net.cheesestudios.dairymod.block;
 
 import net.cheesestudios.dairymod.DairyMod;
 import net.cheesestudios.dairymod.block.custom.CheeseCropBlock;
+import net.cheesestudios.dairymod.block.custom.DairyCondenserBlock;
 import net.cheesestudios.dairymod.block.custom.SoundBlock;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.cheesestudios.dairymod.sound.ModSounds;
@@ -81,6 +82,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_CHEESE_FLOWER = BLOCKS.register("potted_cheese_flower", // don't want an item to be generated with this, use Blocks.register()
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.CHEESE_FLOWER,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_OXEYE_DAISY).noOcclusion()));
+
+    // block entities
+    public static final RegistryObject<Block> DAIRY_CONDENSER = registerBlock("dairy_condenser",
+            () -> new DairyCondenserBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 

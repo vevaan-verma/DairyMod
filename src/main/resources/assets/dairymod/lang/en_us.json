@@ -4,16 +4,16 @@
   "item.dairymod.salt": "Salt",
   "item.dairymod.pinecone": "Pinecone",
 
-  "item.dairymod.after_hours_music_disc": "#1",
-  "item.dairymod.after_hours_music_disc.desc": "#1",
-  "item.dairymod.greedy_music_disc": "#2",
-  "item.dairymod.greedy_music_disc.desc": "#2",
-  "item.dairymod.houdini_extended_music_disc": "#3",
-  "item.dairymod.houdini_extended_music_disc.desc": "#3",
-  "item.dairymod.in_the_night_music_disc": "#4",
-  "item.dairymod.in_the_night_music_disc.desc": "#4",
-  "item.dairymod.popular_music_disc": "#5",
-  "item.dairymod.popular_music_disc.desc": "#5",
+  "item.dairymod.after_hours_music_disc": "After Hours Music Disc",
+  "item.dairymod.after_hours_music_disc.desc": "The Weeknd - After Hours",
+  "item.dairymod.greedy_music_disc": "Greedy Music Disc",
+  "item.dairymod.greedy_music_disc.desc": "Ariana Grande - Greedy",
+  "item.dairymod.houdini_extended_music_disc": "Houdini Extended Music Disc",
+  "item.dairymod.houdini_extended_music_disc.desc": "Dua Lipa - Houdini Extended",
+  "item.dairymod.in_the_night_music_disc": "In The Night Music Disc",
+  "item.dairymod.in_the_night_music_disc.desc": "The Weeknd - In The Night",
+  "item.dairymod.popular_music_disc": "Popular Music Disc",
+  "item.dairymod.popular_music_disc.desc": "The Weeknd - Popular",
 
   "item.dairymod.cheese_detector": "Cheese Detector",
   "item.dairymod.cheese_staff": "Cheese Staff",
@@ -57,6 +57,8 @@
   "block.dairymod.cheese_wall": "Cheese Wall",
   "block.dairymod.cheese_door": "Cheese Door",
   "block.dairymod.cheese_trapdoor": "Cheese Trapdoor",
+
+  "block.dairymod.dairy_condenser": "Dairy Condenser",
 
   "tooltip.dairymod.cheese_detector.tooltip": "Detects cheese under clicked block",
 
