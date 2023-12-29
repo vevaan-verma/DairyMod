@@ -1,6 +1,7 @@
 package net.cheesestudios.dairymod.datagen;
 
 import net.cheesestudios.dairymod.DairyMod;
+import net.cheesestudios.dairymod.block.ModBlocks;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -45,5 +46,15 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.CHEESE_LEGGINGS.get(),
                         ModItems.CHEESE_BOOTS.get());
 
+        // custom wood
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CHEESE_LOG.get().asItem(),
+                        ModBlocks.CHEESE_WOOD.get().asItem(),
+                        ModBlocks.STRIPPED_CHEESE_LOG.get().asItem(),
+                        ModBlocks.STRIPPED_CHEESE_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.CHEESE_PLANKS.get().asItem());
+        
     }
 }

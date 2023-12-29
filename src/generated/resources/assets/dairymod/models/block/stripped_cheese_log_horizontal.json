@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "dairymod:block/stripped_cheese_log_top",
+    "side": "dairymod:block/stripped_cheese_log"
+  }
+}

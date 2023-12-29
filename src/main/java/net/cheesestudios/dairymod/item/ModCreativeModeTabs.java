@@ -101,6 +101,14 @@ public class ModCreativeModeTabs {
                         // block entities
                         output.accept(ModBlocks.DAIRY_CONDENSER.get());
 
+                        // custom wood
+                        output.accept(ModBlocks.CHEESE_LOG.get());
+                        output.accept(ModBlocks.CHEESE_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_CHEESE_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_CHEESE_WOOD.get());
+                        output.accept(ModBlocks.CHEESE_PLANKS.get());
+                        output.accept(ModBlocks.CHEESE_LEAVES.get());
+
                     })
                     .build());
 

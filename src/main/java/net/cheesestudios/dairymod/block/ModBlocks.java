@@ -3,16 +3,21 @@ package net.cheesestudios.dairymod.block;
 import net.cheesestudios.dairymod.DairyMod;
 import net.cheesestudios.dairymod.block.custom.CheeseCropBlock;
 import net.cheesestudios.dairymod.block.custom.DairyCondenserBlock;
+import net.cheesestudios.dairymod.block.custom.ModFlammableRotatedPillarBlock;
 import net.cheesestudios.dairymod.block.custom.SoundBlock;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.cheesestudios.dairymod.sound.ModSounds;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -86,6 +91,70 @@ public class ModBlocks {
     // block entities
     public static final RegistryObject<Block> DAIRY_CONDENSER = registerBlock("dairy_condenser",
             () -> new DairyCondenserBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    // custom wood
+    public static final RegistryObject<Block> CHEESE_LOG = registerBlock("cheese_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> CHEESE_WOOD = registerBlock("cheese_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_CHEESE_LOG = registerBlock("stripped_cheese_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).strength(3f)));
+    public static final RegistryObject<Block> STRIPPED_CHEESE_WOOD = registerBlock("stripped_cheese_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).strength(3f)));
+    public static final RegistryObject<Block> CHEESE_PLANKS = registerBlock("cheese_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+
+                // anonymous class can be turned into new PlankBlock class
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+
+                    return true;
+
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+
+                    return 20;
+
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+
+                    return 5;
+
+                }
+
+            });
+
+    // custom leaves
+    public static final RegistryObject<Block> CHEESE_LEAVES = registerBlock("cheese_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+
+                // anonymous class can be turned into new LeavesBlock class
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+
+                    return true;
+
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+
+                    return 60;
+
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+
+                    return 30;
+
+                }
+
+            });
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 

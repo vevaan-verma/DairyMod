@@ -60,6 +60,13 @@
 
   "block.dairymod.dairy_condenser": "Dairy Condenser",
 
+  "block.dairymod.cheese_log": "Cheese Log",
+  "block.dairymod.cheese_wood": "Cheese Wood",
+  "block.dairymod.stripped_cheese_log": "Stripped Cheese Log",
+  "block.dairymod.stripped_cheese_wood": "Stripped Cheese Wood",
+  "block.dairymod.cheese_planks": "Cheese Planks",
+  "block.dairymod.cheese_leaves": "Cheese Leaves",
+
   "tooltip.dairymod.cheese_detector.tooltip": "Detects cheese under clicked block",
 
   "creativetab.dairy_tab": "Dairy Mod",

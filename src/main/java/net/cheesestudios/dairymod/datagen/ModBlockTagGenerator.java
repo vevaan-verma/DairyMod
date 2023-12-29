@@ -64,5 +64,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.POTTED_CHEESE_FLOWER.get());
         //.addTag(Tags.Blocks.ORES) <- for general ores;
 
+        // custom wood
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.CHEESE_LOG.get(),
+                        ModBlocks.CHEESE_WOOD.get(),
+                        ModBlocks.STRIPPED_CHEESE_LOG.get(),
+                        ModBlocks.STRIPPED_CHEESE_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.CHEESE_PLANKS.get());
+
     }
 }

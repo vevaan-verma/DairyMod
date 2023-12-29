@@ -11,6 +11,7 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Function;
@@ -69,6 +70,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.DAIRY_CONDENSER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/dairy_condenser"))); // use model file because blockbench gives json file not texture
 
+        // custom wood
+        logBlock((RotatedPillarBlock) ModBlocks.CHEESE_LOG.get());
+        axisBlock(((RotatedPillarBlock) ModBlocks.CHEESE_WOOD.get()), blockTexture(ModBlocks.CHEESE_LOG.get()),
+                blockTexture(ModBlocks.CHEESE_LOG.get())); // use cheese log texture for wood too
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CHEESE_LOG.get()), blockTexture(ModBlocks.STRIPPED_CHEESE_LOG.get()),
+                new ResourceLocation(DairyMod.MOD_ID, "block/stripped_cheese_log_top"));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_CHEESE_WOOD.get()), blockTexture(ModBlocks.STRIPPED_CHEESE_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_CHEESE_LOG.get()));
+
+        blockItem(ModBlocks.CHEESE_LOG);
+        blockItem(ModBlocks.CHEESE_WOOD);
+        blockItem(ModBlocks.STRIPPED_CHEESE_LOG);
+        blockItem(ModBlocks.STRIPPED_CHEESE_WOOD);
+
+        blockWithItem(ModBlocks.CHEESE_PLANKS);
+
+        // custom leaves
+        leavesBlock(ModBlocks.CHEESE_LEAVES);
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -91,6 +111,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 new ResourceLocation(DairyMod.MOD_ID, "block/" + textureName + state.getValue(((CheeseCropBlock) block).getAgeProperty()))).renderType("cutout"));
 
         return models;
+
+    }
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject) {
+
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(DairyMod.MOD_ID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+
+        simpleBlockWithItem(blockRegistryObject.get(),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
 
     }
 }

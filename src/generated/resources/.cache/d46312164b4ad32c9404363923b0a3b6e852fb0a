@@ -1,4 +1,6 @@
-// 1.20.1	2023-12-28T15:21:59.133587	Tags for minecraft:item mod id dairymod
+// 1.20.1	2023-12-29T13:27:48.2026739	Tags for minecraft:item mod id dairymod
 f011a527debbb9c60a7e404e5b25a6c446149e75 data/minecraft/tags/items/creeper_drop_music_discs.json
+38b4235aec7dc1d1113fd2ca2a2c17d2a0705b36 data/minecraft/tags/items/logs_that_burn.json
 f011a527debbb9c60a7e404e5b25a6c446149e75 data/minecraft/tags/items/music_discs.json
+e4aa3b809317c2fc61dc4468622a97f684cad713 data/minecraft/tags/items/planks.json
 a6c7165560dd59be376c5b163c06f549024c054a data/minecraft/tags/items/trimmable_armor.json

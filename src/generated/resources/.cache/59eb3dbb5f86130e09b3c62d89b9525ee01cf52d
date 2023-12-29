@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-28T15:21:59.1324083	Loot Tables
+// 1.20.1	2023-12-29T13:27:48.2006798	Loot Tables
 1ca3e7b89e2fbdf3d13ffcb4949e518e39d564b9 data/dairymod/loot_tables/blocks/cheese_block.json
 b7cb2d56ac5d00c89c4c61d7f4b2b60c9c3892c0 data/dairymod/loot_tables/blocks/cheese_button.json
 e528188143f31467f34edf7b22695843a684d3d9 data/dairymod/loot_tables/blocks/cheese_crop.json
@@ -6,13 +6,19 @@ c1d4d7de956f92a0ce08c9c7ecc12bd47e17c11d data/dairymod/loot_tables/blocks/cheese
 e730891211337b46cd29e9809925bb42fcb99481 data/dairymod/loot_tables/blocks/cheese_fence.json
 3319fe72970aeaa34ae196c058523a20b2fecb99 data/dairymod/loot_tables/blocks/cheese_fence_gate.json
 36c973c21941dc05b28049ea97b4966c24eacda9 data/dairymod/loot_tables/blocks/cheese_flower.json
+5cffac79cf5c7f4a6a0ba861c0c78563d2e35d4c data/dairymod/loot_tables/blocks/cheese_leaves.json
+979f22127b2c554ddd4067cf67621ec3f8afa83b data/dairymod/loot_tables/blocks/cheese_log.json
+ab46cb5bb0653903c52a240d02dd5046572dfbf9 data/dairymod/loot_tables/blocks/cheese_planks.json
 79be81abf842754b0bab112e7da9cd2d20e4758d data/dairymod/loot_tables/blocks/cheese_pressure_plate.json
 02ce58cbdc58ac8d7abef70ffc7b69446b4c65f2 data/dairymod/loot_tables/blocks/cheese_slab.json
 8e926971ab5241d052bb635beb0f5749024b6e0b data/dairymod/loot_tables/blocks/cheese_stairs.json
 069a56f151891c041abdea1a91a043964aae760f data/dairymod/loot_tables/blocks/cheese_trapdoor.json
 55fc28b6af06c2a42b5476e79ec4e834ea7a2f6c data/dairymod/loot_tables/blocks/cheese_wall.json
+8d4b1d0bb7e8e121896fec0d65f818da77abac9e data/dairymod/loot_tables/blocks/cheese_wood.json
 40424950b4b5fa4f788419e9131093a0dbdeb4d3 data/dairymod/loot_tables/blocks/dairy_condenser.json
 30cf7251f9243a550d0d69f04b52650c516f6880 data/dairymod/loot_tables/blocks/potted_cheese_flower.json
 8dd9cc6b9f870d3405bdc1b6235e5098c06b5c44 data/dairymod/loot_tables/blocks/salt_block.json
 c6db7cd179bc5663b531d9fc5f9a3f54e9a30725 data/dairymod/loot_tables/blocks/salt_ore.json
 e5eba4a225014a956f2f191746bee582c6166e2b data/dairymod/loot_tables/blocks/sound_block.json
+c4a3de20aee5726c6c8c032344b4f9f120b8a1c1 data/dairymod/loot_tables/blocks/stripped_cheese_log.json
+626427aa875b4cd86c07866f9efbf66883df507a data/dairymod/loot_tables/blocks/stripped_cheese_wood.json
