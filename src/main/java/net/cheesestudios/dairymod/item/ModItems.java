@@ -91,6 +91,12 @@ public class ModItems {
     public static final RegistryObject<Item> CHEESE_SEEDS = ITEMS.register("cheese_seeds",
             () -> new ItemNameBlockItem(ModBlocks.CHEESE_CROP.get(), new Item.Properties()));
 
+    // signs
+    public static final RegistryObject<Item> CHEESE_SIGN = ITEMS.register("cheese_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.CHEESE_SIGN.get(), ModBlocks.CHEESE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> CHEESE_HANGING_SIGN = ITEMS.register("cheese_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.CHEESE_HANGING_SIGN.get(), ModBlocks.CHEESE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
+
     public static void register(IEventBus eventBus) {
 
         ITEMS.register(eventBus);

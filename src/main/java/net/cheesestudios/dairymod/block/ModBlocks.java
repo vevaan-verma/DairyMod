@@ -1,12 +1,10 @@
 package net.cheesestudios.dairymod.block;
 
 import net.cheesestudios.dairymod.DairyMod;
-import net.cheesestudios.dairymod.block.custom.CheeseCropBlock;
-import net.cheesestudios.dairymod.block.custom.DairyCondenserBlock;
-import net.cheesestudios.dairymod.block.custom.ModFlammableRotatedPillarBlock;
-import net.cheesestudios.dairymod.block.custom.SoundBlock;
+import net.cheesestudios.dairymod.block.custom.*;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.cheesestudios.dairymod.sound.ModSounds;
+import net.cheesestudios.dairymod.util.ModWoodTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -77,7 +75,8 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).sound(SoundType.HONEY_BLOCK).noOcclusion(), BlockSetType.OAK));
 
     // crops
-    public static final RegistryObject<Block> CHEESE_CROP = BLOCKS.register("cheese_crop", // use BLOCKS.register() for crops because there is no associated block item (seeds are block item)
+    // use BLOCKS.register() for crops because there is no associated block item (seeds are block item)
+    public static final RegistryObject<Block> CHEESE_CROP = BLOCKS.register("cheese_crop",
             () -> new CheeseCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     // flowers
@@ -92,7 +91,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DAIRY_CONDENSER = registerBlock("dairy_condenser",
             () -> new DairyCondenserBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
-    // custom wood
+    // wood
     public static final RegistryObject<Block> CHEESE_LOG = registerBlock("cheese_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(3f)));
     public static final RegistryObject<Block> CHEESE_WOOD = registerBlock("cheese_wood",
@@ -155,6 +154,17 @@ public class ModBlocks {
                 }
 
             });
+
+    // signs
+    // use BLOCKS.register() for signs because there is no associated block item
+    public static final RegistryObject<Block> CHEESE_SIGN = BLOCKS.register("cheese_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.CHEESE));
+    public static final RegistryObject<Block> CHEESE_WALL_SIGN = BLOCKS.register("cheese_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.CHEESE));
+    public static final RegistryObject<Block> CHEESE_HANGING_SIGN = BLOCKS.register("cheese_hanging_sign",
+            () -> new ModHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.CHEESE));
+    public static final RegistryObject<Block> CHEESE_WALL_HANGING_SIGN = BLOCKS.register("cheese_wall_hanging_sign",
+            () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.CHEESE));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 

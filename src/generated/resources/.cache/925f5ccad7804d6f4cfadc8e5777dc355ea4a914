@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-28T15:21:59.1313416	Item Models: dairymod
+// 1.20.1	2024-01-02T00:38:47.9770951	Item Models: dairymod
 234ac5ca48d538d92140e65e528be055ae121a47 assets/dairymod/models/item/after_hours_music_disc.json
 a63af2494b18fecf8e40a59e701e4d17768db5c5 assets/dairymod/models/item/cheese.json
 33a562aac975285eb5f02bdf24a4b6b23410c78a assets/dairymod/models/item/cheese_axe.json
@@ -30,6 +30,7 @@ a2a399d0d1be555eb4a0fd63d49aa23755fd0e39 assets/dairymod/models/item/cheese_door
 0e22c69356bfe38b117db4359fe81ebb31866350 assets/dairymod/models/item/cheese_fence.json
 71ffa2a3e979ad11803cbcf2e3fc13de98b0827f assets/dairymod/models/item/cheese_fence_gate.json
 3bab35c1787378f57917d5e908ad574387413b08 assets/dairymod/models/item/cheese_flower.json
+053f658735abf62fa76cd64a5ef2599ff8c19fcc assets/dairymod/models/item/cheese_hanging_sign.json
 0d983c3f4cba10fc6133644ec0f751ca6a50cf98 assets/dairymod/models/item/cheese_helmet.json
 58ba0b7a53923c6c0c4ddb61680eb987578f40db assets/dairymod/models/item/cheese_helmet_amethyst_trim.json
 6e182804255ff5eb327ea13206ab6e92491102bc assets/dairymod/models/item/cheese_helmet_copper_trim.json
@@ -57,6 +58,7 @@ a4a5c4ce6b74f462140faaf9c51cc1230b3f5d2d assets/dairymod/models/item/cheese_legg
 877e1951f174ed2541abacf072e252b64767890a assets/dairymod/models/item/cheese_pressure_plate.json
 a5584604e77f592207a79b11cb8c381aa6727249 assets/dairymod/models/item/cheese_seeds.json
 021aee312b47754830bf8182ec2b4c3484d7b4ec assets/dairymod/models/item/cheese_shovel.json
+d227c8e15241f9c45ec9aacbf0c3e32c222766c3 assets/dairymod/models/item/cheese_sign.json
 5260bae5eb460244ca33af9c698c84ef3d78a2b4 assets/dairymod/models/item/cheese_slab.json
 7983048b4c47e610407f1e7cc306927c507c7782 assets/dairymod/models/item/cheese_stairs.json
 5e69c62955c18259dbeec4078b346b0faf90d848 assets/dairymod/models/item/cheese_sword.json

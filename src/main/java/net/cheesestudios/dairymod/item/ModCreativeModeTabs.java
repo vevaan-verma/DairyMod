@@ -64,6 +64,10 @@ public class ModCreativeModeTabs {
                         // crop seeds
                         output.accept(ModItems.CHEESE_SEEDS.get());
 
+                        // signs
+                        output.accept(ModItems.CHEESE_SIGN.get());
+                        output.accept(ModItems.CHEESE_HANGING_SIGN.get());
+
                         // flowers
                         output.accept(ModBlocks.CHEESE_FLOWER.get());
 

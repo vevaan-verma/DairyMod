@@ -80,6 +80,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CHEESE);
         simpleItem(ModItems.ICE_CREAM);
         simpleItem(ModItems.NACHOS);
+
+        // snakcs
         simpleItem(ModItems.CREEPER_SNAKC);
         simpleItem(ModItems.ENDERMAN_SNAKC);
         simpleItem(ModItems.PIGLIN_SNAKC);
@@ -88,6 +90,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // crop seeds
         simpleItem(ModItems.CHEESE_SEEDS);
+
+        // signs
+        simpleItem(ModItems.CHEESE_SIGN);
+        simpleItem(ModItems.CHEESE_HANGING_SIGN);
 
         // flowers
         simpleBlockItemBlockTexture(ModBlocks.CHEESE_FLOWER);

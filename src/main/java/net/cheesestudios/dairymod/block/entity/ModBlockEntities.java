@@ -18,6 +18,15 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(DairyCondenserBlockEntity::new,
                             ModBlocks.DAIRY_CONDENSER.get()).build(null));
 
+    public static final RegistryObject<BlockEntityType<ModSignBlockEntity>> MOD_SIGN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("mod_sign_block_entity", () ->
+                    BlockEntityType.Builder.of(ModSignBlockEntity::new,
+                            ModBlocks.CHEESE_SIGN.get(), ModBlocks.CHEESE_WALL_SIGN.get()).build(null));
+    public static final RegistryObject<BlockEntityType<ModHangingSignBlockEntity>> MOD_HANGING_SIGN_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("mod_hanging_sign_block_entity", () ->
+                    BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
+                            ModBlocks.CHEESE_HANGING_SIGN.get(), ModBlocks.CHEESE_WALL_HANGING_SIGN.get()).build(null));
+
     public static void register(IEventBus eventBus) {
 
         BLOCK_ENTITIES.register(eventBus);

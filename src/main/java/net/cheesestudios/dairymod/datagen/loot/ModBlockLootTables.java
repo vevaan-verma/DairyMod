@@ -88,6 +88,16 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.CHEESE_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.CHEESE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: change to drop sapling
 
+        // signs
+        this.add(ModBlocks.CHEESE_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CHEESE_SIGN.get()));
+        this.add(ModBlocks.CHEESE_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CHEESE_SIGN.get()));
+        this.add(ModBlocks.CHEESE_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CHEESE_HANGING_SIGN.get()));
+        this.add(ModBlocks.CHEESE_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CHEESE_HANGING_SIGN.get()));
+
     }
 
     @Override

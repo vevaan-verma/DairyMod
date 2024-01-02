@@ -89,6 +89,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         // custom leaves
         leavesBlock(ModBlocks.CHEESE_LEAVES);
 
+        // signs
+        signBlock(((StandingSignBlock) ModBlocks.CHEESE_SIGN.get()), ((WallSignBlock) ModBlocks.CHEESE_WALL_SIGN.get()),
+                blockTexture(ModBlocks.CHEESE_PLANKS.get()));
+        hangingSignBlock(ModBlocks.CHEESE_HANGING_SIGN.get(), ModBlocks.CHEESE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.CHEESE_PLANKS.get()));
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -126,6 +131,32 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(blockRegistryObject.get(),
                 models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), new ResourceLocation("minecraft:block/leaves"),
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
+
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+
+    }
+
+    private String name(Block block) {
+
+        return key(block).getPath();
+
+    }
+
+    private ResourceLocation key(Block block) {
+
+        return ForgeRegistries.BLOCKS.getKey(block);
 
     }
 }

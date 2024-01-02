@@ -10,8 +10,10 @@ import net.cheesestudios.dairymod.recipe.ModRecipes;
 import net.cheesestudios.dairymod.screen.DairyCondenserScreen;
 import net.cheesestudios.dairymod.screen.ModMenuTypes;
 import net.cheesestudios.dairymod.sound.ModSounds;
+import net.cheesestudios.dairymod.util.ModWoodTypes;
 import net.cheesestudios.dairymod.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -94,7 +96,8 @@ public class DairyMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
 
-            MenuScreens.register(ModMenuTypes.DAIRY_CONDENSER_MENU.get(), DairyCondenserScreen::new);
+            Sheets.addWoodType(ModWoodTypes.CHEESE); // register wood type
+            MenuScreens.register(ModMenuTypes.DAIRY_CONDENSER_MENU.get(), DairyCondenserScreen::new); // register dairy condenser gui
 
         }
     }
