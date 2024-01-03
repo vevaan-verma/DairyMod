@@ -1,10 +1,12 @@
-// 1.20.1	2023-12-29T13:27:48.2026739	Tags for minecraft:block mod id dairymod
+// 1.20.1	2024-01-02T15:04:35.9334446	Tags for minecraft:block mod id dairymod
 2912ad03338c1cedab80fdb2cc61baccec1dd13e data/dairymod/tags/blocks/cheese_detector_detectables.json
 71a0020683c7336a1df70bb5501f5f02d216304b data/dairymod/tags/blocks/needs_cheese_tool.json
 d02b7130fa5bff710bef80cf69b11da9f4ce3fda data/minecraft/tags/blocks/fences.json
 0bb5a4c602ff238b46e228785aaea402f7199b0e data/minecraft/tags/blocks/fence_gates.json
 38b4235aec7dc1d1113fd2ca2a2c17d2a0705b36 data/minecraft/tags/blocks/logs_that_burn.json
-fc5fd9408dfce9add39ca76e21bedf08fc4a7ecc data/minecraft/tags/blocks/mineable/pickaxe.json
+6a8f99950dff86077521047ca705096aa32b5697 data/minecraft/tags/blocks/mineable/pickaxe.json
+532b696a1f717af1043408ea64d4dcaa2003fd45 data/minecraft/tags/blocks/needs_diamond_tool.json
+ef9117fa0e649a448d036aea35a67a8d2ce64ff1 data/minecraft/tags/blocks/needs_iron_tool.json
 4da4d634e06274f151b363192b0a3908c15b1ff7 data/minecraft/tags/blocks/needs_stone_tool.json
 e4aa3b809317c2fc61dc4468622a97f684cad713 data/minecraft/tags/blocks/planks.json
 d4c8a292ea3043d0d0d7dff6be741112acc3dcc6 data/minecraft/tags/blocks/walls.json

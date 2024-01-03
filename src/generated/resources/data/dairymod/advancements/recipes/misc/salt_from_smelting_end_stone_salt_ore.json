@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_end_stone_salt_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dairymod:end_stone_salt_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "dairymod:salt_from_smelting_end_stone_salt_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_end_stone_salt_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dairymod:salt_from_smelting_end_stone_salt_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

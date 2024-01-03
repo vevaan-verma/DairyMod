@@ -18,7 +18,8 @@ import java.util.function.Consumer;
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
 
     private static final List<ItemLike> SALT_SMELTABLES = List.of(ModItems.SALT.get(),
-            ModBlocks.SALT_ORE.get());
+            ModBlocks.SALT_ORE.get(), ModBlocks.NETHERRACK_SALT_ORE.get(), ModBlocks.DEEPSLATE_SALT_ORE.get(),
+            ModBlocks.END_STONE_SALT_ORE.get());
 
     public ModRecipeProvider(PackOutput pOutput) {
 

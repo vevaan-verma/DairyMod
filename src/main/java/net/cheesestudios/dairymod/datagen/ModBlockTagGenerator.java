@@ -26,6 +26,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         // pickaxe mineables
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.SALT_ORE.get(),
+                        ModBlocks.NETHERRACK_SALT_ORE.get(),
+                        ModBlocks.DEEPSLATE_SALT_ORE.get(),
+                        ModBlocks.END_STONE_SALT_ORE.get(),
                         ModBlocks.SOUND_BLOCK.get());
 
         // cheese tool mineables
@@ -35,6 +38,14 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         // stone tool mineables
         this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.SALT_ORE.get());
+
+        // iron tool mineables
+        this.tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.DEEPSLATE_SALT_ORE.get());
+
+        // diamond tool mineables
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.END_STONE_SALT_ORE.get());
 
         // netherite tool
         // this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL).add();

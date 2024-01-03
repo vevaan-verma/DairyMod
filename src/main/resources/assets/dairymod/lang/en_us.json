@@ -46,6 +46,9 @@
   "block.dairymod.cheese_block": "Block of Cheese",
   "block.dairymod.salt_block": "Block of Salt",
   "block.dairymod.salt_ore": "Salt Ore",
+  "block.dairymod.netherrack_salt_ore": "Netherrack Salt Ore",
+  "block.dairymod.deepslate_salt_ore": "Deepslate Salt Ore",
+  "block.dairymod.end_stone_salt_ore": "End Stone Salt Ore",
   "block.dairymod.sound_block": "Sound Block",
 
   "block.dairymod.cheese_stairs": "Cheese Stairs",

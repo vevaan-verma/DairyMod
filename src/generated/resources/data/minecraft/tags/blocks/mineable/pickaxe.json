@@ -1,6 +1,9 @@
 {
   "values": [
     "dairymod:salt_ore",
+    "dairymod:netherrack_salt_ore",
+    "dairymod:deepslate_salt_ore",
+    "dairymod:end_stone_salt_ore",
     "dairymod:sound_block"
   ]
 }

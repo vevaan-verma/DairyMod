@@ -37,7 +37,16 @@ public class ModBlocks {
     // ores
     public static final RegistryObject<Block> SALT_ORE = registerBlock("salt_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2f).requiresCorrectToolForDrops(),
-                    UniformInt.of(2, 4)));
+                    UniformInt.of(2, 5)));
+    public static final RegistryObject<Block> NETHERRACK_SALT_ORE = registerBlock("netherrack_salt_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).strength(1f).requiresCorrectToolForDrops(),
+                    UniformInt.of(3, 5)));
+    public static final RegistryObject<Block> DEEPSLATE_SALT_ORE = registerBlock("deepslate_salt_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(3f).requiresCorrectToolForDrops(),
+                    UniformInt.of(3, 7)));
+    public static final RegistryObject<Block> END_STONE_SALT_ORE = registerBlock("end_stone_salt_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).strength(5f).requiresCorrectToolForDrops(),
+                    UniformInt.of(3, 7)));
 
     // advanced blocks
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",

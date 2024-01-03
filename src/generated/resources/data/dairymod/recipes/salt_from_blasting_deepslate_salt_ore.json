@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "salt",
+  "ingredient": {
+    "item": "dairymod:deepslate_salt_ore"
+  },
+  "result": "dairymod:salt"
+}

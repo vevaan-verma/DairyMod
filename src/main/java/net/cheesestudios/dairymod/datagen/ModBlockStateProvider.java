@@ -43,6 +43,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         // ores
         blockWithItem(ModBlocks.SALT_ORE);
+        blockWithItem(ModBlocks.NETHERRACK_SALT_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_SALT_ORE);
+        blockWithItem(ModBlocks.END_STONE_SALT_ORE);
 
         // advanced blocks
         blockWithItem(ModBlocks.SOUND_BLOCK);

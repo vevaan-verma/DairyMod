@@ -80,6 +80,9 @@ public class ModCreativeModeTabs {
 
                         // ores
                         output.accept(ModBlocks.SALT_ORE.get());
+                        output.accept(ModBlocks.NETHERRACK_SALT_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_SALT_ORE.get());
+                        output.accept(ModBlocks.END_STONE_SALT_ORE.get());
 
                         // advanced blocks
                         output.accept(ModBlocks.SOUND_BLOCK.get());

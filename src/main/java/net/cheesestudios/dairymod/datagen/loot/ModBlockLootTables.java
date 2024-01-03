@@ -52,6 +52,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         // ores
         this.add(ModBlocks.SALT_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.SALT_ORE.get(), ModItems.SALT.get()));
+        this.add(ModBlocks.NETHERRACK_SALT_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.NETHERRACK_SALT_ORE.get(), ModItems.SALT.get()));
+        this.add(ModBlocks.DEEPSLATE_SALT_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.DEEPSLATE_SALT_ORE.get(), ModItems.SALT.get()));
+        this.add(ModBlocks.END_STONE_SALT_ORE.get(), block -> createCopperLikeOreDrops(ModBlocks.END_STONE_SALT_ORE.get(), ModItems.SALT.get()));
 
         // stairs
         this.dropSelf(ModBlocks.CHEESE_STAIRS.get());
