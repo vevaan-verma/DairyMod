@@ -119,6 +119,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CHEESE_PLANKS.get());
                         output.accept(ModBlocks.CHEESE_LEAVES.get());
 
+                        // dimension portals
+                        output.accept(ModBlocks.DAIRY_PORTAL.get());
+
                     })
                     .build());
 

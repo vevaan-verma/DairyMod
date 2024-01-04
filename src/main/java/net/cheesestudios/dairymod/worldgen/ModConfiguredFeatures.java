@@ -2,6 +2,7 @@ package net.cheesestudios.dairymod.worldgen;
 
 import net.cheesestudios.dairymod.DairyMod;
 import net.cheesestudios.dairymod.block.ModBlocks;
+import net.cheesestudios.dairymod.worldgen.tree.custom.CheeseFoliagePlacer;
 import net.cheesestudios.dairymod.worldgen.tree.custom.CheeseTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -16,7 +17,6 @@ import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfigur
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
@@ -55,10 +55,10 @@ public class ModConfiguredFeatures {
 
                 // RECOMMENDED TO LOOK AT EXISTING EXAMPLES
                 BlockStateProvider.simple(ModBlocks.CHEESE_LOG.get()), // wood to be placed
-                new CheeseTrunkPlacer(3, 1, 2), // placed in straight trunk pattern | parameters: (base height, random height addon 1, random height addon 2)
+                new CheeseTrunkPlacer(3, 1, 2), // placed in straight trunk pattern | parameters: (base height, random height addon 1, random height addon 2) | originally StraightTrunkPlacer
 
                 BlockStateProvider.simple(ModBlocks.CHEESE_LEAVES.get()), // leaves to be placed
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), // placed in blob foliage pattern | parameters: (radius, offset from trunk, height)
+                new CheeseFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3), // placed in blob foliage pattern | parameters: (radius, offset from trunk, height) | originally BlobFoliagePlacer
 
                 new TwoLayersFeatureSize(1, 0, 2)).build() // checks space around the tree being placed
 

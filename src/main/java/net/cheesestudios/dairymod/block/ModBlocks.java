@@ -180,6 +180,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHEESE_WALL_HANGING_SIGN = BLOCKS.register("cheese_wall_hanging_sign",
             () -> new ModWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.CHEESE));
 
+    // dimension portals
+    public static final RegistryObject<Block> DAIRY_PORTAL = registerBlock("dairy_portal",
+            () -> new ModPortalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable().noOcclusion()));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 
         // register block

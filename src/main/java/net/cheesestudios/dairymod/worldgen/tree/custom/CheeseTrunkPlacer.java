@@ -40,13 +40,12 @@ public class CheeseTrunkPlacer extends TrunkPlacer {
 
         setDirtAt(pLevel, pBlockSetter, pRandom, pPos.below(), pConfig); // to set block below sapling to dirt [REQUIRED]
 
+        // idea: have multiple hardcoded tree presets that you randomly pick from if you have advanced branches
+
+        /*
+        simple branches code:
         for (int i = 0; i < pFreeTreeHeight; i++) {
 
-            this.placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
-
-            // idea: have multiple hardcoded tree presets that you randomly pick from if you have advanced branches
-            /*
-            simple branches code:
             if (i % 2 == 0 && pRandom.nextBoolean())
                 for (int j = 0; j < 4; j++)
                     pBlockSetter.accept(pPos.above(i).relative(Direction.NORTH, j),
@@ -70,8 +69,11 @@ public class CheeseTrunkPlacer extends TrunkPlacer {
                     pBlockSetter.accept(pPos.above(i).relative(Direction.WEST, j),
                             (BlockState) Function.identity().apply(pConfig.trunkProvider.getState(pRandom, pPos)
                                     .setValue(RotatedPillarBlock.AXIS, Direction.Axis.X)));
-            */
         }
+        */
+
+        for (int i = 0; i < pFreeTreeHeight; i++)
+            this.placeLog(pLevel, pBlockSetter, pRandom, pPos.above(i), pConfig);
 
         return ImmutableList.of(new FoliagePlacer.FoliageAttachment(pPos.above(pFreeTreeHeight), 0, false)); // list of where foliage placers will place something
 

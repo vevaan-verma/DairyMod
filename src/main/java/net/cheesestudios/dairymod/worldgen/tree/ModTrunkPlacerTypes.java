@@ -10,15 +10,15 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModTrunkPlacerTypes {
 
-    public static final DeferredRegister<TrunkPlacerType<?>> TRUNK_PLACER =
+    public static final DeferredRegister<TrunkPlacerType<?>> TRUNK_PLACERS =
             DeferredRegister.create(Registries.TRUNK_PLACER_TYPE, DairyMod.MOD_ID);
 
     public static final RegistryObject<TrunkPlacerType<CheeseTrunkPlacer>> CHEESE_TRUNK_PLACER =
-            TRUNK_PLACER.register("cheese_trunk_placer", () -> new TrunkPlacerType<>(CheeseTrunkPlacer.CODEC));
+            TRUNK_PLACERS.register("cheese_trunk_placer", () -> new TrunkPlacerType<>(CheeseTrunkPlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
 
-        TRUNK_PLACER.register(eventBus);
+        TRUNK_PLACERS.register(eventBus);
 
     }
 }

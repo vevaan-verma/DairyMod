@@ -75,6 +75,8 @@
   "block.dairymod.cheese_sign": "Cheese Sign",
   "block.dairymod.cheese_hanging_sign": "Cheese Hanging Sign",
 
+  "block.dairymod.dairy_portal": "Dairy Portal",
+
   "tooltip.dairymod.cheese_detector.tooltip": "Detects cheese under clicked block",
 
   "creativetab.dairy_tab": "Dairy Mod",

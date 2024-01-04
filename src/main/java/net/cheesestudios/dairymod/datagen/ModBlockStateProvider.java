@@ -100,6 +100,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.CHEESE_PLANKS.get()));
         hangingSignBlock(ModBlocks.CHEESE_HANGING_SIGN.get(), ModBlocks.CHEESE_WALL_HANGING_SIGN.get(), blockTexture(ModBlocks.CHEESE_PLANKS.get()));
 
+        // dimension portals
+        blockWithItem(ModBlocks.DAIRY_PORTAL);
+
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

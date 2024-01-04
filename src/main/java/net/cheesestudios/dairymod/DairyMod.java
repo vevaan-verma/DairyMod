@@ -12,6 +12,9 @@ import net.cheesestudios.dairymod.screen.ModMenuTypes;
 import net.cheesestudios.dairymod.sound.ModSounds;
 import net.cheesestudios.dairymod.util.ModWoodTypes;
 import net.cheesestudios.dairymod.villager.ModVillagers;
+import net.cheesestudios.dairymod.worldgen.biome.ModTerrablender;
+import net.cheesestudios.dairymod.worldgen.biome.surface.ModSurfaceRules;
+import net.cheesestudios.dairymod.worldgen.tree.ModFoliagePlacers;
 import net.cheesestudios.dairymod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
@@ -29,6 +32,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DairyMod.MOD_ID)
@@ -44,15 +48,23 @@ public class DairyMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus); // register mod items
+
         ModBlocks.register(modEventBus); // register mod blocks
         ModBlockEntities.register(modEventBus); // register mod block entities
-        ModTrunkPlacerTypes.register(modEventBus); // register mod trunk placer types
-        ModRecipes.register(modEventBus); // register mod recipes
         ModMenuTypes.register(modEventBus); // register mod menu types
+
+        ModTrunkPlacerTypes.register(modEventBus); // register mod trunk placer types
+        ModFoliagePlacers.register(modEventBus); // register mod foliage placer types
+
+        ModRecipes.register(modEventBus); // register mod recipes
         ModSounds.register(modEventBus); // register mod sounds
+
         ModLootModifiers.register(modEventBus); // register mod loot modifiers
         ModVillagers.register(modEventBus); // register mod villagers
+
         ModCreativeModeTabs.register(modEventBus); // register creative mode tabs
+
+        ModTerrablender.registerBiomes(); // register terrablender biomes
 
         modEventBus.addListener(this::commonSetup);
 
@@ -67,10 +79,12 @@ public class DairyMod {
 
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.CHEESE_FLOWER.getId(), ModBlocks.POTTED_CHEESE_FLOWER);
 
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules()); // add biome surface rules
+
         });
     }
 
-    // Add the example block item to the building blocks tab
+    // add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
         if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
