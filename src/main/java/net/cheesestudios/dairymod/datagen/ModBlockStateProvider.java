@@ -73,6 +73,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.DAIRY_CONDENSER.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/dairy_condenser"))); // use model file because blockbench gives json file not texture
 
+        // saplings
+        saplingBlock(ModBlocks.CHEESE_SAPLING);
+
         // custom wood
         logBlock((RotatedPillarBlock) ModBlocks.CHEESE_LOG.get());
         axisBlock(((RotatedPillarBlock) ModBlocks.CHEESE_WOOD.get()), blockTexture(ModBlocks.CHEESE_LOG.get()),
@@ -160,6 +163,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private ResourceLocation key(Block block) {
 
         return ForgeRegistries.BLOCKS.getKey(block);
+
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout")); // looks in block textures folder
 
     }
 }

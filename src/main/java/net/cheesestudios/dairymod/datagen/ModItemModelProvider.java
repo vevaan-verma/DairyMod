@@ -116,6 +116,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.CHEESE_DOOR);
         trapdoorItem(ModBlocks.CHEESE_TRAPDOOR);
 
+        // saplings
+        saplingItem(ModBlocks.CHEESE_SAPLING);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -237,5 +240,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 
             });
         }
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(DairyMod.MOD_ID, "block/" + item.getId().getPath())); // looks in block textures folder
+
     }
 }

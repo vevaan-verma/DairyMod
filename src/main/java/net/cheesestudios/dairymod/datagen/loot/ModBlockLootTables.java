@@ -80,6 +80,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         // block entities
         this.dropSelf(ModBlocks.DAIRY_CONDENSER.get());
 
+        // saplings
+        this.dropSelf(ModBlocks.CHEESE_SAPLING.get());
+
         // custom wood
         this.dropSelf(ModBlocks.CHEESE_LOG.get());
         this.dropSelf(ModBlocks.CHEESE_WOOD.get());
@@ -89,7 +92,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         // custom leaves
         this.add(ModBlocks.CHEESE_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.CHEESE_BLOCK.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO: change to drop sapling
+                createLeavesDrops(block, ModBlocks.CHEESE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         // signs
         this.add(ModBlocks.CHEESE_SIGN.get(), block ->

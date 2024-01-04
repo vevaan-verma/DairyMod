@@ -5,6 +5,7 @@ import net.cheesestudios.dairymod.block.custom.*;
 import net.cheesestudios.dairymod.item.ModItems;
 import net.cheesestudios.dairymod.sound.ModSounds;
 import net.cheesestudios.dairymod.util.ModWoodTypes;
+import net.cheesestudios.dairymod.worldgen.tree.CheeseTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -99,6 +100,10 @@ public class ModBlocks {
     // block entities
     public static final RegistryObject<Block> DAIRY_CONDENSER = registerBlock("dairy_condenser",
             () -> new DairyCondenserBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    // saplings
+    public static final RegistryObject<Block> CHEESE_SAPLING = registerBlock("cheese_sapling",
+            () -> new SaplingBlock(new CheeseTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     // wood
     public static final RegistryObject<Block> CHEESE_LOG = registerBlock("cheese_log",
