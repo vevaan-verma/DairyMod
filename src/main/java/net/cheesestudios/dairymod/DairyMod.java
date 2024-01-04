@@ -12,6 +12,7 @@ import net.cheesestudios.dairymod.screen.ModMenuTypes;
 import net.cheesestudios.dairymod.sound.ModSounds;
 import net.cheesestudios.dairymod.util.ModWoodTypes;
 import net.cheesestudios.dairymod.villager.ModVillagers;
+import net.cheesestudios.dairymod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -45,6 +46,7 @@ public class DairyMod {
         ModItems.register(modEventBus); // register mod items
         ModBlocks.register(modEventBus); // register mod blocks
         ModBlockEntities.register(modEventBus); // register mod block entities
+        ModTrunkPlacerTypes.register(modEventBus); // register mod trunk placer types
         ModRecipes.register(modEventBus); // register mod recipes
         ModMenuTypes.register(modEventBus); // register mod menu types
         ModSounds.register(modEventBus); // register mod sounds
